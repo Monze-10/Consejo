@@ -371,7 +371,21 @@ class ModeloCaptura{
 		$stmt = null;
 	}
 
+	static public function mdlMostrarCodigoP($tabla){
+
+		$stmt = Conexion::conectar() -> prepare("SELECT C_CP, D_CODIGO, C_ESTADO FROM tc_codigos_postales");
+
+		$stmt -> execute();
+
+		return $stmt -> fetchall();
+
+		$stmt -> close();
+
+		$stmt = null;
+	}
+
 	
+
 }
 
 
