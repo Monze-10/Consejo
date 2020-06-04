@@ -222,18 +222,18 @@ $desde = ControladorCaptura::ctrMostrarDesdeC();
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="wlocation2"> Origen del Usuario : <span class="danger">*</span> </label>
-                                            <select class="custom-select form-control" id="wlocation2" name="location" onChange="mostrar(this.value)";>
+                                            <select id="origen" name="origen" onchange="ShowOrigen();" class="custom-select form-control">
                                                 <option value="">Selecciona una opciòn</option>
-                                                <option value="foraneo">Foraneo</option>
-                                                <option value="local">Local</option>
-                                                <option value="extranjero">Extranjero</option>
+                                                <option value="1">Foraneo</option>
+                                                <option value="2">Local</option>
+                                                <option value="3">Extranjero</option>
                                                 
                                             </select>
                                         </div>
                                     </div>
                                
                                 
-                                    <div class="col-md-6"  id="foraneo">
+                                    <div class="col-md-6"  id="foraneo" style="display: none" >
                                         <div class="form-group">
                                         <label for="wlocation2"> Estado : <span class="danger">*</span> </label>
                                             <select class="custom-select form-control" id="" name="">
@@ -248,7 +248,7 @@ $desde = ControladorCaptura::ctrMostrarDesdeC();
                                     </div>
                                
                                 
-                                    <div class="col-md-6">
+                                    <div class="col-md-6" id="Local" style="display: none" >
                                         <div class="form-group">
                                             <label for="wlocation2"> Alcaldía: <span class="danger">*</span> </label>
                                             <select class="custom-select form-control " id="" name="">
@@ -263,7 +263,7 @@ $desde = ControladorCaptura::ctrMostrarDesdeC();
                                         </div>
                                     </div>
                             
-                                    <div class="col-md-6">
+                                    <div class="col-md-6" id="Extranjero" style="display: none" >
                                         <div class="form-group">
                                             <label for="wlocation2"> País : <span class="danger">*</span> </label>
                                             <select class="custom-select form-control " id="" name="">
@@ -2687,224 +2687,6 @@ $desde = ControladorCaptura::ctrMostrarDesdeC();
         <script src="vistas/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
         <script src="vistas/plugins/sparkline/jquery.sparkline.min.js"></script>
         <script type="text/javascript">
-        function ShowSelected()
-            {
-            /* Para obtener el valor */
-            var cod = document.getElementById("producto").value;
-            alert(cod);
-             
-            /* Para obtener el texto 
-            var combo = document.getElementById("producto");
-            var selected = combo.options[combo.selectedIndex].text;
-            alert(selected);*/
-            switch (cod) {
-                            case 'reportealm.p.':
-                            //Declaraciones ejecutadas cuando el resultado de expresión coincide con el valor2
-                            
-                                console.log("reporte al mp");
-                                  
-                            break;
-                            case 'personadesaparecida':
-                                console.log("persona desaparecida");
-                                
-                                //Declaraciones ejecutadas cuando el resultado de expresión coincide con el valor1
-                                break;
-                            case 'alcoholimetro':
-                                //Declaraciones ejecutadas cuando el resultado de expresión coincide con el valor2
-                                console.log("alcoholimetro");
-                            break;
-                            case 'covid-19':
-                                //Declaraciones ejecutadas cuando el resultado de expresión coincide con el valor2
-                                console.log("covid-19");
-                            break;
-                            case '35':
-                                
-                                $("#ViolenciaFamiliar").css('display','block');
-                                $("#CorrupcionPolicial").css('display','none');
-                                $("#ExtorcionTelefonica").css('display','none');
-                                $("#MaltratoInfantil").css('display','none');
-                                $("#ProteccionAnimales").css('display','none');
-                                $("#suicidio").css('display','none');
-                                $("#ReporteRed").css('display','none');
-
-                                
-                            break; 
-                            case 'terminalesseguras':
-                                console.log("terminalesseguras");
-                               
-                                //Declaraciones ejecutadas cuando el resultado de expresión coincide con el valor1
-                            break;
-                            case 'migrantes':
-                                console.log("migrantes");
-                               
-                                //Declaraciones ejecutadas cuando el resultado de expresión coincide con el valor1
-                            break;
-                            case 'cortada/equivocada':
-                                console.log("cortada/equivocada");
-                               
-                                //Declaraciones ejecutadas cuando el resultado de expresión coincide con el valor1
-                            break;
-                            case 'informativa':
-                                console.log("informativa");
-                               
-                                //Declaraciones ejecutadas cuando el resultado de expresión coincide con el valor1
-                            break;
-                            case '43':
-                                
-                                $("#CorrupcionPolicial").css('display','block');
-                                $("#ExtorcionTelefonica").css('display','none');
-                                $("#MaltratoInfantil").css('display','none');
-                                $("#ProteccionAnimales").css('display','none');
-                                $("#ViolenciaFamiliar").css('display','none');
-                                $("#suicidio").css('display','none');
-                                $("#ReporteRed").css('display','none');
-                               
-                            break;
-                            case 'robodevehiculos':
-                                console.log("robodevehiculos");
-                               
-                                //Declaraciones ejecutadas cuando el resultado de expresión coincide con el valor1
-                            break;
-                            case '1':
-                                
-                                $("#ExtorcionTelefonica").css('display','block');
-                                $("#MaltratoInfantil").css('display','none');
-                                $("#ProteccionAnimales").css('display','none');
-                                $("#CorrupcionPolicial").css('display','none');
-                                $("#ViolenciaFamiliar").css('display','none');
-                                $("#suicidio").css('display','none');
-                                $("#ReporteRed").css('display','none');
-
-                                
-                            break;
-                            case 'actividaddelictiva':
-                                console.log("actividaddelictiva");
-                               
-                                //Declaraciones ejecutadas cuando el resultado de expresión coincide con el valor1
-                            break;
-                            case 'orientacionjuridica':
-                                console.log("orientacionjuridica");
-                               
-                                //Declaraciones ejecutadas cuando el resultado de expresión coincide con el valor1
-                            break;
-                            case '4':
-                                console.log("entro");
-                                $("#MaltratoInfantil").css('display','none');
-                                $("#ProteccionAnimales").css('display','block');
-                                $("#CorrupcionPolicial").css('display','none');
-                                $("#ViolenciaFamiliar").css('display','none');
-                                $("#suicidio").css('display','none');
-                                $("#ExtorcionTelefonica").css('display','none');
-                                $("#ReporteRed").css('display','none');
-
-                                   
-
-                                
-                               
-                                //Declaraciones ejecutadas cuando el resultado de expresión coincide con el valor1
-                            break;
-                            case '27':
-                                
-                                $("#MaltratoInfantil").css('display','block');
-                                $("#ProteccionAnimales").css('display','none');
-                                $("#CorrupcionPolicial").css('display','none');
-                                $("#ViolenciaFamiliar").css('display','none');
-                                $("#suicidio").css('display','none');
-                                $("#ExtorcionTelefonica").css('display','none');
-                                $("#ReporteRed").css('display','none');
-                               
-                            break;
-                            case 'sistemaalertasocial':
-                                console.log("sistemaalertasocial");
-                               
-                                //Declaraciones ejecutadas cuando el resultado de expresión coincide con el valor1
-                            break;
-                            case 'sidec':
-                                console.log("sidec");
-                               
-                                //Declaraciones ejecutadas cuando el resultado de expresión coincide con el valor1
-                            break;
-                            case 'establecimientosmercantiles':
-                                console.log("establecimientosmercantiles");
-                               
-                                //Declaraciones ejecutadas cuando el resultado de expresión coincide con el valor1
-                            break;
-                            case 'transporte':
-                                console.log("transporte");
-                               
-                                //Declaraciones ejecutadas cuando el resultado de expresión coincide con el valor1
-                            break;
-                            case '12':
-                                console.log("apoyopsicologico");
-                               
-                                /*$.ajax ({
-
-                                    data: cod,
-                                    url:'../modelos/apoyo.modelo.php',
-                                    type: 'post',
-                                    before send: function(){
-                                        $("catalogo").html("procesando, espere por favor");
-                                    },
-                                    success: function (response){
-
-                                        $("catalogo").html(response);
-                                    }
-                                });*/
-                            break;
-                            case '13':
-                                
-                                $("#suicidio").css('display','block');
-                                $("#ViolenciaFamiliar").css('display','none');
-                                $("#CorrupcionPolicial").css('display','none');
-                                $("#ExtorcionTelefonica").css('display','none');
-                                $("#MaltratoInfantil").css('display','none');
-                                $("#ProteccionAnimales").css('display','none');
-                                $("#ReporteRed").css('display','none');
-                               
-                            break;
-                            case 'emergencias':
-                                console.log("emergencias");
-                               
-                                //Declaraciones ejecutadas cuando el resultado de expresión coincide con el valor1
-                            break;
-                            case 'reordenamientodetrabajadoresnoasalariados':
-                                console.log("reordenamientodetrabajadoresnoasalariados");
-                               
-                                //Declaraciones ejecutadas cuando el resultado de expresión coincide con el valor1
-                            break;
-                            case 'protejamosanuestrosjovenes':
-                                console.log("protejamosanuestrosjovenes");
-                               
-                                //Declaraciones ejecutadas cuando el resultado de expresión coincide con el valor1
-                            break;
-                            case 'personasensituaciondecalle':
-                                console.log("personasensituaciondecalle");
-                               
-                                //Declaraciones ejecutadas cuando el resultado de expresión coincide con el valor1
-                            break;
-                            case 'culturacivica':
-                                console.log("culturacivica");
-                               
-                                //Declaraciones ejecutadas cuando el resultado de expresión coincide con el valor1
-                            break;
-                            case 'otros':
-                                console.log("otros");
-                               
-                                //Declaraciones ejecutadas cuando el resultado de expresión coincide con el valor1
-                            break;
-                            default:
-                                $("#suicidio").css('display','none');
-                                $("#ViolenciaFamiliar").css('display','none');
-                                $("#CorrupcionPolicial").css('display','none');
-                                $("#ExtorcionTelefonica").css('display','none');
-                                $("#MaltratoInfantil").css('display','none');
-                                $("#ProteccionAnimales").css('display','none');
-                                $("#ReporteRed").css('display','none');        
-                            }
-            }
-        </script>
-        
-
         
 </body>
 </html>
