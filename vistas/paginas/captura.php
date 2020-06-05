@@ -4,6 +4,38 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 ini_set("memory_limit", "-1");
+
+
+
+
+
+
+require_once "controladores/captura.controlador.php";
+require_once "modelos/captura.modelo.php";
+require_once "controladores/tabla.controlador.php";
+require_once "modelos/reporte.modelo.php";
+//require_once "controladores/log.controlador.php";    <---- Esta no se ocupa por ahora(creo)
+
+$tabla = new ControladorTabla();
+$tabla -> ctrReporteCiudadano();
+
+$captura = new ControladorCaptura();
+$captura -> crtMostrarCiudad();
+$captura -> crtMostrarNecesidad();
+$captura -> crtMostrarPais();
+$captura -> crtMostrarDetalle();
+$captura -> crtMostrarDelito();
+
+
+
+
+
+
+
+
+
+
+
 $ciudad =  ControladorCaptura::crtMostrarCiudad();
 $pais =  ControladorCaptura::crtMostrarPais();
 $necesidad = ControladorCaptura::crtMostrarNecesidad();
@@ -79,9 +111,7 @@ $desde = ControladorCaptura::ctrMostrarDesdeC();
                     </div>
                     <div class="col-md-7 align-self-center">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                            <li class="breadcrumb-item">Forms</li>
-                            <li class="breadcrumb-item active">Form wizards</li>
+                            <li class="breadcrumb-item"><a href="controladores/CtrlLogOut.php">Salir</a></li>
                         </ol>
                     </div>
                     <div class="">
