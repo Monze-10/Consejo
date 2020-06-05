@@ -24,6 +24,6 @@ $captura -> crtMostrarPais();
 $captura -> crtMostrarDetalle();
 $captura -> crtMostrarDelito();
 
-
+// Oli crayoli
 
 ?>            
