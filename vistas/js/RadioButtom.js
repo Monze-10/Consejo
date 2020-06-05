@@ -103,10 +103,12 @@ $(document).ready(function() {
     $("input[type=radio]").click(function(event){
         var valor = $(event.target).val();
         if(valor =="ReportanteSi"){
+            $("#DatosPersona").show();
             $("#reportante").hide();
             
         } else if (valor == "ReportanteNo") {
             $("#reportante").show();
+            $("#DatosPersona").hide();
             
         } else { 
             // Otra cosa
@@ -202,17 +204,17 @@ function ShowSelected()
 /* Para obtener el valor */
 var cod = document.getElementById("producto").value;
 alert(cod);
-    
-/* Para obtener el texto 
-var combo = document.getElementById("producto");
-var selected = combo.options[combo.selectedIndex].text;
-alert(selected);*/
+
     switch (cod) {
-        case 'reportealm.p.':
-        //Declaraciones ejecutadas cuando el resultado de expresión coincide con el valor2
-        
-            console.log("reporte al mp");
-                
+        case '40':
+            
+            $("#plateada").css('display','block');
+            console.log("hola");
+            
+            
+            
+
+            
         break;
         case 'personadesaparecida':
             console.log("persona desaparecida");
@@ -236,6 +238,8 @@ alert(selected);*/
             $("#ProteccionAnimales").css('display','none');
             $("#suicidio").css('display','none');
             $("#ReporteRed").css('display','none');
+            
+            
 
             
         break; 
@@ -268,6 +272,7 @@ alert(selected);*/
             $("#ViolenciaFamiliar").css('display','none');
             $("#suicidio").css('display','none');
             $("#ReporteRed").css('display','none');
+           
             
         break;
         case 'robodevehiculos':
@@ -284,6 +289,7 @@ alert(selected);*/
             $("#ViolenciaFamiliar").css('display','none');
             $("#suicidio").css('display','none');
             $("#ReporteRed").css('display','none');
+            
 
             
         break;
@@ -306,6 +312,7 @@ alert(selected);*/
             $("#suicidio").css('display','none');
             $("#ExtorcionTelefonica").css('display','none');
             $("#ReporteRed").css('display','none');
+            
 
                 
 
@@ -323,9 +330,11 @@ alert(selected);*/
             $("#ExtorcionTelefonica").css('display','none');
             $("#ReporteRed").css('display','none');
             
+            
         break;
-        case 'sistemaalertasocial':
+        case 'dulce':
             console.log("sistemaalertasocial");
+            
             
             //Declaraciones ejecutadas cuando el resultado de expresión coincide con el valor1
         break;
@@ -370,6 +379,7 @@ alert(selected);*/
             $("#MaltratoInfantil").css('display','none');
             $("#ProteccionAnimales").css('display','none');
             $("#ReporteRed").css('display','none');
+            $("#LineaPlateada").css('display','none');
             
         break;
         case 'emergencias':
@@ -409,7 +419,8 @@ alert(selected);*/
             $("#ExtorcionTelefonica").css('display','none');
             $("#MaltratoInfantil").css('display','none');
             $("#ProteccionAnimales").css('display','none');
-            $("#ReporteRed").css('display','none');        
+            $("#ReporteRed").css('display','none'); 
+                  
         }
 }
 

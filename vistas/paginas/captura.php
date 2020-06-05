@@ -252,18 +252,18 @@ $desde = ControladorCaptura::ctrMostrarDesdeC();
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="wlocation2"> Origen del Usuario : <span class="danger">*</span> </label>
-                                            <select class="custom-select form-control" id="wlocation2" name="location" onChange="mostrar(this.value)";>
+                                            <select id="origen" name="origen" onchange="ShowOrigen();" class="custom-select form-control" >
                                                 <option value="">Selecciona una opciòn</option>
-                                                <option value="foraneo">Foraneooooooaa</option>
-                                                <option value="local">Local</option>
-                                                <option value="extranjero">Extranjero</option>
+                                                <option value="1">Foraneo</option>
+                                                <option value="2">Local</option>
+                                                <option value="3">Extranjero</option>
                                                 
                                             </select>
                                         </div>
                                     </div>
                                
                                 
-                                    <div class="col-md-6"  id="foraneo">
+                                    <div class="col-md-6"  id="foraneo" style="display: none">
                                         <div class="form-group">
                                         <label for="wlocation2"> Estado : <span class="danger">*</span> </label>
                                             <select class="custom-select form-control" id="" name="">
@@ -278,7 +278,7 @@ $desde = ControladorCaptura::ctrMostrarDesdeC();
                                     </div>
                                
                                 
-                                    <div class="col-md-6">
+                                    <div class="col-md-6" style="display: none" id="local">
                                         <div class="form-group">
                                             <label for="wlocation2"> Alcaldía: <span class="danger">*</span> </label>
                                             <select class="custom-select form-control " id="" name="">
@@ -293,7 +293,7 @@ $desde = ControladorCaptura::ctrMostrarDesdeC();
                                         </div>
                                     </div>
                             
-                                    <div class="col-md-6">
+                                    <div class="col-md-6" style="display: none" id="Extranjero">
                                         <div class="form-group">
                                             <label for="wlocation2"> País : <span class="danger">*</span> </label>
                                             <select class="custom-select form-control " id="" name="">
@@ -503,7 +503,7 @@ $desde = ControladorCaptura::ctrMostrarDesdeC();
                                                 </div>
                                             </div>
 
-                                            <div class="col-md-6"  id="foraneo">
+                                            <div class="col-md-6"  id="">
                                                 <div class="form-group">
                                                 <label for="wlocation2"> Estado : <span class="danger">*</span> </label>
                                                     <select class="custom-select form-control" id="" name="">
@@ -517,7 +517,7 @@ $desde = ControladorCaptura::ctrMostrarDesdeC();
                                                 </div>
                                             </div>
 
-                                            <div class="col-md-6"  id="foraneo">
+                                            <div class="col-md-6"  id="">
                                                 <div class="form-group">
                                                 <label for="wlocation2">Estatus de los hechos : <span class="danger">*</span> </label>
                                                     <select class="custom-select form-control" id="" name="">
@@ -1405,9 +1405,10 @@ $desde = ControladorCaptura::ctrMostrarDesdeC();
                                         </div>
                                     </div>
                                 </div>
-                                <h3>Comisión Ciudadana contra la Violencia Mujeres Policìa</h3>
+                                
                                     
                                 <div class="row" style="display: none" id="MujeresPolicia">
+                                    <h3>Comisión Ciudadana contra la Violencia Mujeres Policìa</h3>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>La persona que habla es policia?:</label>
@@ -1454,9 +1455,10 @@ $desde = ControladorCaptura::ctrMostrarDesdeC();
                                         </div>
                                     </div>
                                 </div>
-                                <h3>Captura de Reporte Red</h3>
+                                
                                     
                                 <div class="row"  id="ReporteRed" style="display: none"> 
+                                    <h3>Captura de Reporte Red</h3>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label for="wfirstName2"> Folio : <p>RED-</p><input type="text" class="form-control required" id="wfirstName2" name="firstName"><span class="danger">*</span><button type="button" class="btn btn-primary">Solicita Folio</button></label>
@@ -1492,9 +1494,11 @@ $desde = ControladorCaptura::ctrMostrarDesdeC();
                                                 </select>
                                         </div>
                                     </div>
+                                   
                                 </div>
-                                <h3>Linea Plateada</h3>  
-                                <div class="row" style="display: none" id="LineaPlateada">
+                                <h3>Linea Plateada </h3>
+                                <div class="row" id="plateada" style="display: none">
+                                
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>¿Se esta comunicando el adulto mayor?  :</label>
@@ -1510,6 +1514,10 @@ $desde = ControladorCaptura::ctrMostrarDesdeC();
                                         </div>
                                     </div>
                                 </div>
+
+                                        
+                                   
+                                
                                 
                                 <div class="row" style="display: none" id="reportante">
                                     <h3>Datos del Reportante</h3>
@@ -1642,10 +1650,10 @@ $desde = ControladorCaptura::ctrMostrarDesdeC();
                                             <label for="wlocation2"> Indique la instituciòn : <span class="danger">*</span> </label>
                                             <select class="custom-select form-control required" id="wlocation2" name="location" onChange="mostrar(this.value)";>
                                                 <option value="">Selecciona una opciòn</option>
-                                                <option value="foraneo">IMSS</option>
-                                                <option value="local">ISSSTE</option>
-                                                <option value="extranjero">SEDENA</option>
-                                                <option value="extranjero">OTROS</option>
+                                                <option value="1">IMSS</option>
+                                                <option value="2">ISSSTE</option>
+                                                <option value="3">SEDENA</option>
+                                                <option value="4">OTROS</option>
                                                 
                                             </select>
                                         </div>
@@ -1677,11 +1685,51 @@ $desde = ControladorCaptura::ctrMostrarDesdeC();
                                                 </label>
                                                 
                                         </div>
+                                        <h3>Salud</h3>
                                     </div>
                                     
+                                    <div class="row" id="salud"  >
+                                        
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>¿tiene algùna incapacidad fìsica para comprar, preparar y/o consumir sus alimentos:</label>
+                                                    <label class="custom-control custom-radio">
+                                                        <input value="" name="radio" type="radio" class="custom-control-input">
+                                                        <span class="custom-control-label">Si</span>
+                                                    </label>
+                                                    <label class="custom-control custom-radio">
+                                                        <input value="" name="radio" type="radio" class="custom-control-input">
+                                                        <span class="custom-control-label">No</span>
+                                                    </label>
+                                                    
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>¿Padece algun(as) enfermedad(es)?:</label>
+                                                    
+                                                    <label class="custom-control custom-radio">
+                                                        <input value="padece" name="radio" type="radio" class="custom-control-input">
+                                                        <span class="custom-control-label">Si</span>
+                                                    </label>
+                                                    <label class="custom-control custom-radio">
+                                                        <input value="nopadece" name="radio" type="radio" class="custom-control-input">
+                                                        <span class="custom-control-label">No</span>
+                                                    </label>
+                                                    
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6" style="display : none" id="cual">
+                                            <div class="form-group">
+                                                <label for="wjobTitle2">Cuales :</label>
+                                                <input type="text" class="form-control required" id="wjobTitle2">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h3>¿Con quièn vive?</h3>
+                                    
                                 </div>
-                                <h3>¿Con quièn vive?</h3>
-                                <div class="row" style="display: none" id="ViveCon">
+                                <div class="row"  id="ViveCon">
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>¿Con quièn vive? :</label>
@@ -1783,8 +1831,8 @@ $desde = ControladorCaptura::ctrMostrarDesdeC();
                                             <label for="wlocation2">giro Mercantil : <span class="danger">*</span> </label>
                                             <select class="custom-select form-control required" id="wlocation2" name="location" onChange="mostrar(this.value)";>
                                                 <option value="">Selecciona una opciòn</option>
-                                                <option value="foraneo">Hombre</option>
-                                                <option value="local">Mujer</option>
+                                                <option value="">Hombre</option>
+                                                <option value=>Mujer</option>
                                                 
                                                 
                                             </select>
@@ -1882,8 +1930,8 @@ $desde = ControladorCaptura::ctrMostrarDesdeC();
                                             <label for="wlocation2">Problematica : <span class="danger">*</span> </label>
                                             <select class="custom-select form-control required" id="wlocation2" name="location" onChange="mostrar(this.value)";>
                                                 <option value="">Selecciona una opciòn</option>
-                                                <option value="foraneo">Hombre</option>
-                                                <option value="local">Mujer</option>
+                                                <option value="">Hombre</option>
+                                                <option value="">Mujer</option>
                                                 
                                                 
                                             </select>
@@ -1926,8 +1974,8 @@ $desde = ControladorCaptura::ctrMostrarDesdeC();
                                             <label for="wlocation2">Sexo : <span class="danger">*</span> </label>
                                             <select class="custom-select form-control required" id="wlocation2" name="location" onChange="mostrar(this.value)";>
                                                 <option value="">Selecciona una opciòn</option>
-                                                <option value="foraneo">Hombre</option>
-                                                <option value="local">Mujer</option>
+                                                <option value="">Hombre</option>
+                                                <option value="">Mujer</option>
                                                 
                                                 
                                             </select>
@@ -2013,12 +2061,12 @@ $desde = ControladorCaptura::ctrMostrarDesdeC();
                                                 <label for="wlocation2">Tipo de Transporte : <span class="danger">*</span> </label>
                                                 <select class="custom-select form-control required" id="wlocation2" name="location" onChange="mostrar(this.value)";>
                                                     <option value="">Selecciona una opciòn</option>
-                                                    <option value="foraneo">Preescolar</option>
-                                                    <option value="local">Primaria</option>
-                                                    <option value="local">Secundaria</option>
-                                                    <option value="local">Media Superior</option>
-                                                    <option value="local">superior</option>
-                                                    <option value="local">Sin dato</option>
+                                                    <option value="">Preescolar</option>
+                                                    <option value="">Primaria</option>
+                                                    <option value="">Secundaria</option>
+                                                    <option value="">Media Superior</option>
+                                                    <option value="">superior</option>
+                                                    <option value="">Sin dato</option>
                                                     
                                                     
                                                 </select>
@@ -2108,8 +2156,8 @@ $desde = ControladorCaptura::ctrMostrarDesdeC();
                                                 <label for="wlocation2">Problematica : <span class="danger">*</span> </label>
                                                 <select class="custom-select form-control required" id="wlocation2" name="location" onChange="mostrar(this.value)";>
                                                     <option value="">Selecciona una opciòn</option>
-                                                    <option value="foraneo">Ciudad de Mèxico</option>
-                                                    <option value="local">Mèxico</option>
+                                                    <option value="">Ciudad de Mèxico</option>
+                                                    <option value="">Mèxico</option>
                                                     
                                                     
                                                 </select>
