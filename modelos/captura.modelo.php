@@ -1,6 +1,6 @@
 <?php
 
-require "conexion.php";
+// require "conexion.php";
 
 class ModeloCaptura{
 
@@ -389,3 +389,4 @@ class ModeloCaptura{
 }
 
 
+?>
