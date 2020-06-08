@@ -168,7 +168,7 @@ function ShowOrigen()
 {
 /* Para obtener el valor */
 var ori = document.getElementById("origen").value;
-alert(ori);
+console.log(ori);
 
 switch (ori) {
     case '1':
@@ -203,7 +203,7 @@ function ShowSelected()
 {
 /* Para obtener el valor */
 var cod = document.getElementById("producto").value;
-alert(cod);
+console.log(cod);
 
     switch (cod) {
         case '40':
@@ -267,8 +267,8 @@ alert(cod);
             
             $("#CorrupcionPolicial").css('display','block');
             $("#ExtorcionTelefonica").css('display','none');
-            $("#MaltratoInfantil").css('display','none');
             $("#ProteccionAnimales").css('display','none');
+            $("#MaltratoInfantil").css('display','none');
             $("#ViolenciaFamiliar").css('display','none');
             $("#suicidio").css('display','none');
             $("#ReporteRed").css('display','none');
