@@ -34,10 +34,10 @@ File: scss
 /*General Elements
 *******************/
 a.link:hover, a.link:focus {
-  color: #009efb !important; }
+  color: #1565c0 !important; }
 
 .bg-theme {
-  background-color: #009efb !important; }
+  background-color: #1565c0 !important; }
 
 .pagination > .active > a,
 .pagination > .active > span,
@@ -45,40 +45,40 @@ a.link:hover, a.link:focus {
 .pagination > .active > span:hover,
 .pagination > .active > a:focus,
 .pagination > .active > span:focus {
-  background-color: #009efb;
-  border-color: #009efb; }
+  background-color: #1565c0;
+  border-color: #1565c0; }
 
 .right-sidebar .rpanel-title {
-  background: #009efb; }
+  background: #1565c0; }
 
 .stylish-table tbody tr:hover, .stylish-table tbody tr.active {
-  border-left: 4px solid #009efb; }
+  border-left: 4px solid #1565c0; }
 
 .text-themecolor {
-  color: #009efb !important; }
+  color: #1565c0 !important; }
 
 .profile-tab li a.nav-link.active,
 .customtab li a.nav-link.active {
-  border-bottom: 2px solid #009efb;
-  color: #009efb; }
+  border-bottom: 2px solid #1565c0;
+  color: #1565c0; }
 
 .profile-tab li a.nav-link:hover,
 .customtab li a.nav-link:hover {
-  color: #009efb; }
+  color: #1565c0; }
 
 /*******************
 /*Buttons
 *******************/
 .btn-themecolor,
 .btn-themecolor.disabled {
-  background: #009efb;
+  background: #1565c0;
   color: #ffffff;
-  border: 1px solid #009efb; }
+  border: 1px solid #1565c0; }
   .btn-themecolor:hover,
   .btn-themecolor.disabled:hover {
-    background: #009efb;
+    background: #1565c0;
     opacity: 0.7;
-    border: 1px solid #009efb; }
+    border: 1px solid #1565c0; }
   .btn-themecolor.active, .btn-themecolor:focus,
   .btn-themecolor.disabled.active,
   .btn-themecolor.disabled:focus {
@@ -88,18 +88,18 @@ a.link:hover, a.link:focus {
 /*sidebar navigation
 *******************/
 .label-themecolor {
-  background: #009efb; }
+  background: #1565c0; }
 
 .sidebar-nav > ul > li.active > a {
-  color: #009efb;
-  border-color: #009efb; }
+  color: #1565c0;
+  border-color: #1565c0; }
   .sidebar-nav > ul > li.active > a i {
-    color: #009efb; }
+    color: #1565c0; }
 
 .sidebar-nav ul li a.active, .sidebar-nav ul li a:hover {
-  color: #009efb; }
+  color: #1565c0; }
   .sidebar-nav ul li a.active i, .sidebar-nav ul li a:hover i {
-    color: #009efb; }
+    color: #1565c0; }
 
 .sidebar-nav > ul > li > a i {
   color: #a6b7bf; }

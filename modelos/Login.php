@@ -48,7 +48,7 @@
                 $resultado = null;
                 $cantidad_resultado = null;
 
-                header("location:../index.php");
+                header("location:../");
 
             }
 

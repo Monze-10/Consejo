@@ -1,17 +1,5 @@
 <?php
 
-    // if (isset($_GET["pagina"])) {
-
-    //     if ($_GET["pagina"] == "tablas" ||
-    //         $_GET["pagina"] == "captura" ||
-    //         $_GET["pagina"] == "prueba" ||
-    //         $_GET["pagina"] == "totales"){
-    //             include "paginas/".$_GET["pagina"].".php";
-    //     }
-    // }else{
-    //     include "paginas/login.php";
-    // }
-
     session_start();
 
     if (isset($_SESSION["usu"]) && isset($_SESSION["pass"])) {
@@ -20,7 +8,13 @@
         $validar = new Login();
         $validar->validarLogin();
 
-        include_once("paginas/captura.php");
+        if(isset($_GET["page"])){
+            include_once("paginas/".$_GET["page"].".php");
+        }else{
+            include_once("paginas/main.php");
+
+        }
+
         
     } else {
 

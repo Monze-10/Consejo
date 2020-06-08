@@ -124,7 +124,6 @@ $desde = ControladorCaptura::ctrMostrarDesdeC();
                 <!-- ============================================================== -->
                 <!-- Start Page Content -->
                 <!-- ============================================================== -->
-            
                 <div class="col-12">
                     <div class="card wizard-content">
                         <div class="card-body">
