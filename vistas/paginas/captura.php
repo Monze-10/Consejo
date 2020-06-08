@@ -2195,11 +2195,11 @@ $desde = ControladorCaptura::ctrMostrarDesdeC();
                                                 <div class="form-group">
                                                     <label>¿Pertenece a un programa especial?:</label>
                                                         <label class="custom-control custom-radio">
-                                                            <input value="si" name="radio" type="radio" class="custom-control-input">
+                                                            <input value="si" name="SiProEspecial" type="radio" class="custom-control-input">
                                                             <span class="custom-control-label">Si</span>
                                                         </label>
                                                         <label class="custom-control custom-radio">
-                                                            <input value="no" name="radio" type="radio" class="custom-control-input">
+                                                            <input value="no" name="NoProEspecial" type="radio" class="custom-control-input">
                                                             <span class="custom-control-label">No</span>
                                                         </label> 
                                                         
@@ -2221,11 +2221,11 @@ $desde = ControladorCaptura::ctrMostrarDesdeC();
                                                 <div class="form-group">
                                                     <label>¿Lugar de los hechos?:</label>
                                                         <label class="custom-control custom-radio">
-                                                            <input value="LugarSi" name="radio" type="radio" class="custom-control-input">
+                                                            <input value="LugarSi" name="LugHechos" type="radio" class="custom-control-input">
                                                             <span class="custom-control-label">Si</span>
                                                         </label>
                                                         <label class="custom-control custom-radio">
-                                                            <input value="LugarNo" name="radio" type="radio" class="custom-control-input">
+                                                            <input value="LugarNo" name="NoLugHechos" type="radio" class="custom-control-input">
                                                             <span class="custom-control-label">No</span>
                                                         </label> 
                                                         
@@ -2312,11 +2312,11 @@ $desde = ControladorCaptura::ctrMostrarDesdeC();
                                                 <div class="form-group">
                                                     <label>¿Reportan autos? :</label>
                                                         <label class="custom-control custom-radio">
-                                                            <input value="AutoSi" name="radio" type="radio" class="custom-control-input">
+                                                            <input value="AutoSi" name="SiReAutos" type="radio" class="custom-control-input">
                                                             <span class="custom-control-label">Si</span>
                                                         </label>
                                                         <label class="custom-control custom-radio">
-                                                            <input value="AutoNo" name="radio" type="radio" class="custom-control-input">
+                                                            <input value="AutoNo" name="NoReAutos" type="radio" class="custom-control-input">
                                                             <span class="custom-control-label">No</span>
                                                         </label> 
                                                         
@@ -2390,17 +2390,17 @@ $desde = ControladorCaptura::ctrMostrarDesdeC();
                                                 <div class="form-group">
                                                     <label>¿Reportan Personas? :</label>
                                                         <label class="custom-control custom-radio">
-                                                            <input value="ReportanPersonasSi" name="radio" type="radio" class="custom-control-input">
+                                                            <input value="ReportanPersonasSi" name="SiRePersonas" type="radio" class="custom-control-input">
                                                             <span class="custom-control-label">Si</span>
                                                         </label>
                                                         <label class="custom-control custom-radio">
-                                                            <input value="ReportanPersonasNo" name="radio" type="radio" class="custom-control-input">
+                                                            <input value="ReportanPersonasNo" name="NoRePersonas" type="radio" class="custom-control-input">
                                                             <span class="custom-control-label">No</span>
                                                         </label> 
                                                         
                                                 </div>
                                             </div>
-                                        <</div>    
+                                        </div>    
                                         
                                         <div class="row" id="PersonasDenunciadas" style="display: none">
                                             <h3>Datos de la(s) Persona(s) Denunciada(s)</h3>
