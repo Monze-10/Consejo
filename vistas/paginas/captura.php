@@ -2460,23 +2460,23 @@ $desde = ControladorCaptura::ctrMostrarDesdeC();
                                                     <div class="form-group">
                                                         <label>Color de ojos :</label>
                                                             <label class="custom-control custom-radio">
-                                                                <input id="ColorOjos" name="ColorOjos" type="radio" class="custom-control-input">
+                                                                <input id="Desconoce" name="ColorOjos" type="radio" class="custom-control-input">
                                                                 <span class="custom-control-label">Desconoce</span>
                                                             </label>
                                                             <label class="custom-control custom-radio">
-                                                                <input id="OjosVerdes" name="OjosVerdes" type="radio" class="custom-control-input">
+                                                                <input id="OjosVerdes" name="ColorOjos" type="radio" class="custom-control-input">
                                                                 <span class="custom-control-label">Verdes</span>
                                                             </label>
                                                             <label class="custom-control custom-radio">
-                                                                <input id="OjosCafe" name="OjosCafe" type="radio" class="custom-control-input">
+                                                                <input id="OjosCafe" name="ColorOjos" type="radio" class="custom-control-input">
                                                                 <span class="custom-control-label">Cafès</span>
                                                             </label>     
                                                             <label class="custom-control custom-radio">
-                                                                <input id="OjosNegro" name="OjosNegro" type="radio" class="custom-control-input">
+                                                                <input id="OjosNegro" name="ColorOjos" type="radio" class="custom-control-input">
                                                                 <span class="custom-control-label">Negros</span>
                                                             </label>
                                                             <label class="custom-control custom-radio">
-                                                                <input id="OjosAzul" name="OjosAzul" type="radio" class="custom-control-input">
+                                                                <input id="OjosAzul" name="ColorOjos" type="radio" class="custom-control-input">
                                                                 <span class="custom-control-label">Azules</span>
                                                             </label>
                                                     
@@ -2486,19 +2486,19 @@ $desde = ControladorCaptura::ctrMostrarDesdeC();
                                                     <div class="form-group">
                                                         <label>Nariz :</label>
                                                             <label class="custom-control custom-radio">
-                                                                <input id="radio3" name="radio" type="radio" class="custom-control-input">
+                                                                <input id="Desc" name="Nariz" type="radio" class="custom-control-input">
                                                                 <span class="custom-control-label">Desconoce</span>
                                                             </label>
                                                             <label class="custom-control custom-radio">
-                                                                <input id="radio4" name="radio" type="radio" class="custom-control-input">
+                                                                <input id="Conve" name="Nariz" type="radio" class="custom-control-input">
                                                                 <span class="custom-control-label">Convexa</span>
                                                             </label>
                                                             <label class="custom-control custom-radio">
-                                                                <input id="radio4" name="radio" type="radio" class="custom-control-input">
+                                                                <input id="Rec" name="Nariz" type="radio" class="custom-control-input">
                                                                 <span class="custom-control-label">Rectilinea</span>
                                                             </label>     
                                                             <label class="custom-control custom-radio">
-                                                                <input id="radio4" name="radio" type="radio" class="custom-control-input">
+                                                                <input id="Con" name="Nariz" type="radio" class="custom-control-input">
                                                                 <span class="custom-control-label">Concava</span>
                                                             </label>
                                                             
@@ -2509,31 +2509,31 @@ $desde = ControladorCaptura::ctrMostrarDesdeC();
                                                     <div class="form-group">
                                                         <label>Color de Cabello :</label>
                                                             <label class="custom-control custom-radio">
-                                                                <input id="radio3" name="radio" type="radio" class="custom-control-input">
+                                                                <input id="DescCa" name="ColorCabello" type="radio" class="custom-control-input">
                                                                 <span class="custom-control-label">Desconoce</span>
                                                             </label>
                                                             <label class="custom-control custom-radio">
-                                                                <input id="radio4" name="radio" type="radio" class="custom-control-input">
+                                                                <input id="CaNegro" name="ColorCabello" type="radio" class="custom-control-input">
                                                                 <span class="custom-control-label">Negro</span>
                                                             </label>
                                                             <label class="custom-control custom-radio">
-                                                                <input id="radio4" name="radio" type="radio" class="custom-control-input">
+                                                                <input id="CaRojo" name="ColorCabello" type="radio" class="custom-control-input">
                                                                 <span class="custom-control-label">Rojo</span>
                                                             </label>     
                                                             <label class="custom-control custom-radio">
-                                                                <input id="radio4" name="radio" type="radio" class="custom-control-input">
+                                                                <input id="CaRu" name="ColorCabello" type="radio" class="custom-control-input">
                                                                 <span class="custom-control-label">Rubio</span>
                                                             </label>
                                                             <label class="custom-control custom-radio">
-                                                                <input id="radio4" name="radio" type="radio" class="custom-control-input">
+                                                                <input id="CaCast" name="ColorCabello" type="radio" class="custom-control-input">
                                                                 <span class="custom-control-label">Castaño</span>
                                                             </label>
                                                             <label class="custom-control custom-radio">
-                                                                <input id="radio4" name="radio" type="radio" class="custom-control-input">
+                                                                <input id="CaCano" name="ColorCabello" type="radio" class="custom-control-input">
                                                                 <span class="custom-control-label">Cano</span>
                                                             </label>
                                                             <label class="custom-control custom-radio">
-                                                                <input id="radio4" name="radio" type="radio" class="custom-control-input">
+                                                                <input id="CaCafe" name="ColorCabello" type="radio" class="custom-control-input">
                                                                 <span class="custom-control-label">Cafe</span>
                                                             </label>
                                                     
@@ -2543,23 +2543,23 @@ $desde = ControladorCaptura::ctrMostrarDesdeC();
                                                     <div class="form-group">
                                                         <label>Cantidad de cabello :</label>
                                                             <label class="custom-control custom-radio">
-                                                                <input id="radio3" name="radio" type="radio" class="custom-control-input">
+                                                                <input id="DescCabello" name="CantCabello" type="radio" class="custom-control-input">
                                                                 <span class="custom-control-label">Desconoce</span>
                                                             </label>
                                                             <label class="custom-control custom-radio">
-                                                                <input id="radio4" name="radio" type="radio" class="custom-control-input">
+                                                                <input id="EscCa" name="CantCabello" type="radio" class="custom-control-input">
                                                                 <span class="custom-control-label">Escaso</span>
                                                             </label>
                                                             <label class="custom-control custom-radio">
-                                                                <input id="radio4" name="radio" type="radio" class="custom-control-input">
+                                                                <input id="AbuCa" name="CantCabello" type="radio" class="custom-control-input">
                                                                 <span class="custom-control-label">Abundante</span>
                                                             </label>     
                                                             <label class="custom-control custom-radio">
-                                                                <input id="radio4" name="radio" type="radio" class="custom-control-input">
+                                                                <input id="NorCa" name="CantCabello" type="radio" class="custom-control-input">
                                                                 <span class="custom-control-label">Normal</span>
                                                             </label>
                                                             <label class="custom-control custom-radio">
-                                                                <input id="radio4" name="radio" type="radio" class="custom-control-input">
+                                                                <input id="CalCa" name="CantCabello" type="radio" class="custom-control-input">
                                                                 <span class="custom-control-label">Calvo</span>
                                                             </label>
                                                             
@@ -2568,21 +2568,21 @@ $desde = ControladorCaptura::ctrMostrarDesdeC();
                                                 </div>
                                                 <div class="col-md-3">
                                                     <div class="form-group">
-                                                        <label>Complexiòn :</label>
+                                                        <label>Boca :</label>
                                                             <label class="custom-control custom-radio">
-                                                                <input id="radio3" name="radio" type="radio" class="custom-control-input">
+                                                                <input id="DescBo" name="Boca" type="radio" class="custom-control-input">
                                                                 <span class="custom-control-label">Desconoce</span>
                                                             </label>
                                                             <label class="custom-control custom-radio">
-                                                                <input id="radio4" name="radio" type="radio" class="custom-control-input">
+                                                                <input id="MedBo" name="Boca" type="radio" class="custom-control-input">
                                                                 <span class="custom-control-label">Mediana</span>
                                                             </label>
                                                             <label class="custom-control custom-radio">
-                                                                <input id="radio4" name="radio" type="radio" class="custom-control-input">
+                                                                <input id="GranBo" name="Boca" type="radio" class="custom-control-input">
                                                                 <span class="custom-control-label">Grande</span>
                                                             </label>     
                                                             <label class="custom-control custom-radio">
-                                                                <input id="radio4" name="radio" type="radio" class="custom-control-input">
+                                                                <input id="ChiBo" name="Boca" type="radio" class="custom-control-input">
                                                                 <span class="custom-control-label">Chico</span>
                                                             </label>
                                                             
@@ -2591,29 +2591,29 @@ $desde = ControladorCaptura::ctrMostrarDesdeC();
                                                 </div>
                                                 <div class="col-md-3">
                                                     <div class="form-group">
-                                                        <label>Color de Cabello :</label>
+                                                        <label>Complexion :</label>
                                                             <label class="custom-control custom-radio">
-                                                                <input id="radio3" name="radio" type="radio" class="custom-control-input">
+                                                                <input id="DescCom" name="Complexion" type="radio" class="custom-control-input">
                                                                 <span class="custom-control-label">Desconoce</span>
                                                             </label>
                                                             <label class="custom-control custom-radio">
-                                                                <input id="radio4" name="radio" type="radio" class="custom-control-input">
+                                                                <input id="RegCom" name="Complexion" type="radio" class="custom-control-input">
                                                                 <span class="custom-control-label">Regular</span>
                                                             </label>
                                                             <label class="custom-control custom-radio">
-                                                                <input id="radio4" name="radio" type="radio" class="custom-control-input">
+                                                                <input id="DelCom" name="Complexion" type="radio" class="custom-control-input">
                                                                 <span class="custom-control-label">Delgada</span>
                                                             </label>     
                                                             <label class="custom-control custom-radio">
-                                                                <input id="radio4" name="radio" type="radio" class="custom-control-input">
+                                                                <input id="ObeCom" name="Complexion" type="radio" class="custom-control-input">
                                                                 <span class="custom-control-label">Obesa</span>
                                                             </label>
                                                             <label class="custom-control custom-radio">
-                                                                <input id="radio4" name="radio" type="radio" class="custom-control-input">
+                                                                <input id="ForCom" name="Complexion" type="radio" class="custom-control-input">
                                                                 <span class="custom-control-label">Fornido</span>
                                                             </label>
                                                             <label class="custom-control custom-radio">
-                                                                <input id="radio4" name="radio" type="radio" class="custom-control-input">
+                                                                <input id="RobCom" name="Complexion" type="radio" class="custom-control-input">
                                                                 <span class="custom-control-label">Robusta</span>
                                                             </label>
                                                             
@@ -2624,23 +2624,23 @@ $desde = ControladorCaptura::ctrMostrarDesdeC();
                                                     <div class="form-group">
                                                         <label>Color de Piel :</label>
                                                             <label class="custom-control custom-radio">
-                                                                <input id="radio3" name="radio" type="radio" class="custom-control-input">
+                                                                <input id="DescPi" name="ColorPiel" type="radio" class="custom-control-input">
                                                                 <span class="custom-control-label">Desconoce</span>
                                                             </label>
                                                             <label class="custom-control custom-radio">
-                                                                <input id="radio4" name="radio" type="radio" class="custom-control-input">
+                                                                <input id="NegPi" name="ColorPiel" type="radio" class="custom-control-input">
                                                                 <span class="custom-control-label">Negro</span>
                                                             </label>
                                                             <label class="custom-control custom-radio">
-                                                                <input id="radio4" name="radio" type="radio" class="custom-control-input">
+                                                                <input id="MorPi" name="ColorPiel" type="radio" class="custom-control-input">
                                                                 <span class="custom-control-label">Moreno</span>
                                                             </label>     
                                                             <label class="custom-control custom-radio">
-                                                                <input id="radio4" name="radio" type="radio" class="custom-control-input">
+                                                                <input id="AlbPi" name="ColorPiel" type="radio" class="custom-control-input">
                                                                 <span class="custom-control-label">Albino</span>
                                                             </label>
                                                             <label class="custom-control custom-radio">
-                                                                <input id="radio4" name="radio" type="radio" class="custom-control-input">
+                                                                <input id="BlaPi" name="ColorPiel" type="radio" class="custom-control-input">
                                                                 <span class="custom-control-label">Blanco</span>
                                                             </label>
                                                             
@@ -2650,19 +2650,19 @@ $desde = ControladorCaptura::ctrMostrarDesdeC();
                                                     <div class="form-group">
                                                         <label>Cejas :</label>
                                                             <label class="custom-control custom-radio">
-                                                                <input id="radio3" name="radio" type="radio" class="custom-control-input">
+                                                                <input id="DescCe" name="Cejas" type="radio" class="custom-control-input">
                                                                 <span class="custom-control-label">Desconoce</span>
                                                             </label>
                                                             <label class="custom-control custom-radio">
-                                                                <input id="radio4" name="radio" type="radio" class="custom-control-input">
+                                                                <input id="RegCe" name="Cejas" type="radio" class="custom-control-input">
                                                                 <span class="custom-control-label">Regulares</span>
                                                             </label>
                                                             <label class="custom-control custom-radio">
-                                                                <input id="radio4" name="radio" type="radio" class="custom-control-input">
+                                                                <input id="EscCe" name="Cejas" type="radio" class="custom-control-input">
                                                                 <span class="custom-control-label">Escasas</span>
                                                             </label>     
                                                             <label class="custom-control custom-radio">
-                                                                <input id="radio4" name="radio" type="radio" class="custom-control-input">
+                                                                <input id="PobCe" name="Cejas" type="radio" class="custom-control-input">
                                                                 <span class="custom-control-label">Pobladas</span>
                                                             </label>
                                                             
