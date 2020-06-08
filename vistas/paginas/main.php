@@ -106,7 +106,7 @@
             <nav class="sidebar-nav">
                 <ul id="sidebarnav">
                     <li class="nav-devider"></li>
-                    <li class="active"> <a class="has-arrow waves-effect" href="./#" aria-expanded="false"><i class="mdi mdi-home-outline"></i><span class="hide-menu">Inicio</span></a>
+                    <li class="active"> <a class="has-arrow waves-effect" aria-expanded="false"><i class="mdi mdi-home-outline"></i><span class="hide-menu">Inicio</span></a>
                     </li>
                     <li> <a href="./?page=captura_reporte" class="has-arrow waves-effect waves-dark" aria-expanded="false"><i class="mdi mdi-format-list-bulleted-type"></i><span class="hide-menu">Captura de reporte</span></a>
                     </li>
