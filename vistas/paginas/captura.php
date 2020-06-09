@@ -1711,21 +1711,24 @@
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label>¿Sabe leer y escribir?  :</label>
-                                                            <label class="custom-control custom-radio">
-                                                                <input value="" name="radio" type="radio" class="custom-control-input">
-                                                                <span class="custom-control-label">Si</span>
-                                                            </label>
-                                                            <label class="custom-control custom-radio">
-                                                                <input value="" name="radio" type="radio" class="custom-control-input">
-                                                                <span class="custom-control-label">No</span>
-                                                            </label>
-                                                            
-                                                    </div>
-                                                    <h3>Salud</h3>
-                                                </div>                
-                                            </div>    
+                                                        <div class="form-group">
+                                                            <label>¿Sabe leer y escribir?  :</label>
+                                                                <label class="custom-control custom-radio">
+                                                                    <input value="" name="radio" type="radio" class="custom-control-input">
+                                                                    <span class="custom-control-label">Si</span>
+                                                                </label>
+                                                                <label class="custom-control custom-radio">
+                                                                    <input value="" name="radio" type="radio" class="custom-control-input">
+                                                                    <span class="custom-control-label">No</span>
+                                                                </label>
+                                                                
+                                                        </div>
+                                                        <h3>Salud</h3>        
+                                                
+                                                </div>
+                                                                
+                                            </div>
+                                                
                                             <div class="row" id="salud"  >
                                         
                                                 <div class="col-md-6">
@@ -1766,6 +1769,7 @@
                                             
                                             </div>
                                             
+                                            
                                         </div>
                                         <h3>Con Quien Vive</h3>                              
                                         
@@ -1784,29 +1788,30 @@
                                                         
                                                 </div>
                                             </div>
-                                            <div class="row" style="display: none" id="vive">
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label for="wfirstName2"> Nombre : <span class="danger">*</span> </label>
-                                                        <br> </br>
-                                                        <input type="text" class="form-control" id="wfirstName2" name="firstName"> </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <p>¿Que parentesco tiene con el adulto mayor?</p>
-                                                        <label for="wfirstName2"> Parentesco : <span class="danger">*</span> </label>
-                                                        <input type="text" class="form-control" id="wfirstName2" name="firstName"> </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label for="wfirstName2"> Edad : <span class="danger">*</span> </label>
-                                                        <input type="text" class="form-control" id="wfirstName2" name="firstName"> </div>
-                                                </div>
-                                                    
-                                                    
-                                                
+                                        </div>    
+                                        <div class="row" style="display: none" id="vive">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="wfirstName2"> Nombre : <span class="danger">*</span> </label>
+                                                    <br> </br>
+                                                    <input type="text" class="form-control" id="wfirstName2" name="firstName"> </div>
                                             </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <p>¿Que parentesco tiene con el adulto mayor?</p>
+                                                    <label for="wfirstName2"> Parentesco : <span class="danger">*</span> </label>
+                                                    <input type="text" class="form-control" id="wfirstName2" name="firstName"> </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="wfirstName2"> Edad : <span class="danger">*</span> </label>
+                                                    <input type="text" class="form-control" id="wfirstName2" name="firstName"> </div>
+                                            </div>
+                                                
+                                                
+                                            
                                         </div>
+                                        
                                         <!--<h3>Salud</h3>
                                         <div class="row" id="salud" style="display : none" >
                                             <div class="col-md-6">
