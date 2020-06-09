@@ -1531,21 +1531,22 @@
                                             </div>
                                         
                                         </div>
-                                        <h3>Linea Plateada </h3>
                                         <div class="row" id="plateada" style="display: none">
-                                        
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label>¿Se esta comunicando el adulto mayor?  :</label>
-                                                        <label class="custom-control custom-radio">
-                                                            <input value="ReportanteSi" name="radio" type="radio" class="custom-control-input">
-                                                            <span class="custom-control-label">Si</span>
-                                                        </label>
-                                                        <label class="custom-control custom-radio">
-                                                            <input value="ReportanteNo" name="radio" type="radio" class="custom-control-input">
-                                                            <span class="custom-control-label">No</span>
-                                                        </label>
-                                                        
+                                            <h3>Linea Plateada </h3>
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label>¿Se esta comunicando el adulto mayor?  :</label>
+                                                            <label class="custom-control custom-radio">
+                                                                <input value="ReportanteSi" name="radio" type="radio" class="custom-control-input">
+                                                                <span class="custom-control-label">Si</span>
+                                                            </label>
+                                                            <label class="custom-control custom-radio">
+                                                                <input value="ReportanteNo" name="radio" type="radio" class="custom-control-input">
+                                                                <span class="custom-control-label">No</span>
+                                                            </label>
+                                                            
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -1583,148 +1584,135 @@
                                             </div>    
                                             
                                         </div>
-                                        <h3>Datos de las Persona</h3>
                                         <div class="row" style="display: none" id="DatosPersona">
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label for="wfirstName2"> Nombre : <span class="danger">*</span> </label>
-                                                    <input type="text" class="form-control" id="wfirstName2" name="firstName"> </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label for="wfirstName2"> Apellido Paterno : <span class="danger">*</span> </label>
-                                                    <input type="text" class="form-control" id="wfirstName2" name="firstName"> </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label for="wfirstName2"> Apellido Materno : <span class="danger">*</span> </label>
-                                                    <input type="text" class="form-control" id="wfirstName2" name="firstName"> </div>
-                                            </div>
-
-                                            <div class="col-md-6"  id="">
-                                                <div class="form-group">
-                                                <label for="wlocation2"> Edad : <span class="danger">*</span> </label>
-                                                    <select class="custom-select form-control" id="" name="">
-                                                        
-                                                        <option value="">Selecciona una opcion</option>
-                                                        <?php foreach ($edad as $cedad): ?>
-                                                            <option value="<?php echo $cedad['CON_ID']?>"><?php echo $cedad['CON_DESCRIPCION']?></option>
-                                                        <?php endforeach; ?>
-                                                    </select>        
-                                                        
-                                                </div>
-                                            </div>
-                                    
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label for="wjobTitle2">Telefono :</label>
-                                                    <input type="number" class="form-control" id="wjobTitle2">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label for="wfirstName2">Codigo Postal : <span class="danger">*</span> </label>
-                                                    <input type="text" class="form-control" id="wfirstName2" name="firstName">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label for="wfirstName2">Colonia : <span class="danger">*</span> </label>
-                                                    <input type="text" class="form-control" id="wfirstName2" name="firstName">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label for="wfirstName2">Estado : <span class="danger">*</span> </label>
-                                                    <input type="text" class="form-control" id="wfirstName2" name="firstName">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label for="wfirstName2">Alcaldìa : <span class="danger">*</span> </label>
-                                                    <input type="text" class="form-control" id="wfirstName2" name="firstName">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label for="wfirstName2">Calle : <span class="danger">*</span> </label>
-                                                    <input type="text" class="form-control" id="wfirstName2" name="firstName">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label for="wfirstName2">Numero Interior : <span class="danger">*</span> </label>
-                                                    <input type="text" class="form-control" id="wfirstName2" name="firstName">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label for="wfirstName2">Numero Exterior : <span class="danger">*</span> </label>
-                                                    <input type="text" class="form-control" id="wfirstName2" name="firstName">
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label>¿Usted es derechohabiente?  :</label>
-                                                        <label class="custom-control custom-radio">
-                                                            <input value="SeSoSi" name="radio" type="radio" class="custom-control-input">
-                                                            <span class="custom-control-label">Si</span>
-                                                        </label>
-                                                        <label class="custom-control custom-radio">
-                                                            <input value="SeSoNo" name="radio" type="radio" class="custom-control-input">
-                                                            <span class="custom-control-label">No</span>
-                                                        </label>
-                                                        
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6" style="display: none" id="seguridadSocial">
-                                                <div class="form-group">
-                                                    <label for="wlocation2"> Indique la instituciòn : <span class="danger">*</span> </label>
-                                                    <select class="custom-select form-control" id="wlocation2" name="location" onChange="mostrar(this.value)";>
-                                                        <option value="">Selecciona una opciòn</option>
-                                                        <option value="1">IMSS</option>
-                                                        <option value="2">ISSSTE</option>
-                                                        <option value="3">SEDENA</option>
-                                                        <option value="4">OTROS</option>
-                                                        
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label>¿Cuenta con pensiòn alimentaria del Gobierno de la CDMX?  :</label>
-                                                        <label class="custom-control custom-radio">
-                                                            <input value="" name="radio" type="radio" class="custom-control-input">
-                                                            <span class="custom-control-label">Si</span>
-                                                        </label>
-                                                        <label class="custom-control custom-radio">
-                                                            <input value="" name="radio" type="radio" class="custom-control-input">
-                                                            <span class="custom-control-label">No</span>
-                                                        </label>
-                                                        
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
-                                                    <label>¿Sabe leer y escribir?  :</label>
-                                                        <label class="custom-control custom-radio">
-                                                            <input value="" name="radio" type="radio" class="custom-control-input">
-                                                            <span class="custom-control-label">Si</span>
-                                                        </label>
-                                                        <label class="custom-control custom-radio">
-                                                            <input value="" name="radio" type="radio" class="custom-control-input">
-                                                            <span class="custom-control-label">No</span>
-                                                        </label>
-                                                        
-                                                </div>
-                                                <h3>Salud</h3>
-                                            </div>
-                                    
-                                            <div class="row" id="salud" >
-                                                
-                                                <div class="col-md-6">
+                                            <h3>Datos de la persona</h3>
+                                                <div class="row">    
+                                                    
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            
+                                                            <label for="wfirstName2"> Nombre : <span class="danger">*</span> </label>
+                                                            
+                                                            <input type="text" class="form-control required" id="wfirstName2" name="firstName"> </div>
+                                                            
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="wfirstName2"> Apellido Paterno : <span class="danger">*</span> </label>
+                                                            <input type="text" class="form-control required" id="wfirstName2" name="firstName"> 
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="wfirstName2"> Apellido Materno : <span class="danger">*</span> </label>
+                                                            <input type="text" class="form-control required" id="wfirstName2" name="firstName"> </div>
+                                                    </div>
+                                                    <div class="col-md-6"  id="">
+                                                        <div class="form-group">
+                                                        <label for="wlocation2"> Edad : <span class="danger">*</span> </label>
+                                                            <select class="custom-select form-control" id="" name="">
+                                                                
+                                                                <option value="">Selecciona una opcion</option>
+                                                                <?php foreach ($edad as $cedad): ?>
+                                                                    <option value="<?php echo $cedad['CON_ID']?>"><?php echo $cedad['CON_DESCRIPCION']?></option>
+                                                                <?php endforeach; ?>
+                                                            </select>        
+                                                                
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="wjobTitle2">Telefono :</label>
+                                                            <input type="number" class="form-control required" id="wjobTitle2">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="wfirstName2">Codigo Postal : <span class="danger">*</span> </label>
+                                                            <input type="text" class="form-control required" id="wfirstName2" name="firstName">
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="wfirstName2">Colonia : <span class="danger">*</span> </label>
+                                                            <input type="text" class="form-control required" id="wfirstName2" name="firstName">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="wfirstName2">Estado : <span class="danger">*</span> </label>
+                                                            <input type="text" class="form-control required" id="wfirstName2" name="firstName">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="wfirstName2">Alcaldìa : <span class="danger">*</span> </label>
+                                                            <input type="text" class="form-control required" id="wfirstName2" name="firstName">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="wfirstName2">Calle : <span class="danger">*</span> </label>
+                                                            <input type="text" class="form-control required" id="wfirstName2" name="firstName">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="wfirstName2">Numero Interior : <span class="danger">*</span> </label>
+                                                            <input type="text" class="form-control required" id="wfirstName2" name="firstName">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label for="wfirstName2">Numero Exterior : <span class="danger">*</span> </label>
+                                                            <input type="text" class="form-control required" id="wfirstName2" name="firstName">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label>¿Usted es derechohabiente?  :</label>
+                                                                <label class="custom-control custom-radio">
+                                                                    <input value="SeSoSi" name="radio" type="radio" class="custom-control-input">
+                                                                    <span class="custom-control-label">Si</span>
+                                                                </label>
+                                                                <label class="custom-control custom-radio">
+                                                                    <input value="SeSoNo" name="radio" type="radio" class="custom-control-input">
+                                                                    <span class="custom-control-label">No</span>
+                                                                </label>
+                                                                
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6" style="display: none" id="seguridadSocial">
+                                                        <div class="form-group">
+                                                            <label for="wlocation2"> Indique la instituciòn : <span class="danger">*</span> </label>
+                                                            <select class="custom-select form-control required" id="wlocation2" name="location" onChange="mostrar(this.value)";>
+                                                                <option value="">Selecciona una opciòn</option>
+                                                                <option value="1">IMSS</option>
+                                                                <option value="2">ISSSTE</option>
+                                                                <option value="3">SEDENA</option>
+                                                                <option value="4">OTROS</option>
+                                                                
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <label>¿Cuenta con pensiòn alimentaria del Gobierno de la CDMX?  :</label>
+                                                                <label class="custom-control custom-radio">
+                                                                    <input value="" name="radio" type="radio" class="custom-control-input">
+                                                                    <span class="custom-control-label">Si</span>
+                                                                </label>
+                                                                <label class="custom-control custom-radio">
+                                                                    <input value="" name="radio" type="radio" class="custom-control-input">
+                                                                    <span class="custom-control-label">No</span>
+                                                                </label>
+                                                                
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <label>¿tiene algùna incapacidad fìsica para comprar, preparar y/o consumir sus alimentos:</label>
+                                                        <label>¿Sabe leer y escribir?  :</label>
                                                             <label class="custom-control custom-radio">
                                                                 <input value="" name="radio" type="radio" class="custom-control-input">
                                                                 <span class="custom-control-label">Si</span>
@@ -1735,17 +1723,35 @@
                                                             </label>
                                                             
                                                     </div>
+                                                    <h3>Salud</h3>
+                                                </div>                
+                                            </div>    
+                                            <div class="row" id="salud"  >
+                                        
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label>¿tiene algùna incapacidad fìsica para comprar, preparar y/o consumir sus alimentos:</label>
+                                                            <label class="custom-control custom-radio">
+                                                                <input value="IncaSi" name="Incapacidad" type="radio" class="custom-control-input">
+                                                                <span class="custom-control-label">Si</span>
+                                                            </label>
+                                                            <label class="custom-control custom-radio">
+                                                                <input value="IncaNo" name="Incapacidad" type="radio" class="custom-control-input">
+                                                                <span class="custom-control-label">No</span>
+                                                            </label>
+                                                            
+                                                    </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label>¿Padece algun(as) enfermedad(es)?:</label>
                                                             
                                                             <label class="custom-control custom-radio">
-                                                                <input value="padece" name="radio" type="radio" class="custom-control-input">
+                                                                <input value="padece" name="PadeceEnfermedad" type="radio" class="custom-control-input">
                                                                 <span class="custom-control-label">Si</span>
                                                             </label>
                                                             <label class="custom-control custom-radio">
-                                                                <input value="nopadece" name="radio" type="radio" class="custom-control-input">
+                                                                <input value="nopadece" name="PadeceEnfermedad" type="radio" class="custom-control-input">
                                                                 <span class="custom-control-label">No</span>
                                                             </label>
                                                             
@@ -1757,11 +1763,54 @@
                                                         <input type="text" class="form-control" id="wjobTitle2">
                                                     </div>
                                                 </div>
+                                            
                                             </div>
-
-                                            <h3>¿Con quièn vive?</h3>
-                                    
+                                            <h3>Con Quien Vive</h3> 
+                                            <div class="row" id="salud"  >
+                                        
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label>¿tiene algùna incapacidad fìsica para comprar, preparar y/o consumir sus alimentos:</label>
+                                                            <label class="custom-control custom-radio">
+                                                                <input value="IncaSi" name="Incapacidad" type="radio" class="custom-control-input">
+                                                                <span class="custom-control-label">Si</span>
+                                                            </label>
+                                                            <label class="custom-control custom-radio">
+                                                                <input value="IncaNo" name="Incapacidad" type="radio" class="custom-control-input">
+                                                                <span class="custom-control-label">No</span>
+                                                            </label>
+                                                            
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label>¿Padece algun(as) enfermedad(es)?:</label>
+                                                            
+                                                            <label class="custom-control custom-radio">
+                                                                <input value="padece" name="PadeceEnfermedad" type="radio" class="custom-control-input">
+                                                                <span class="custom-control-label">Si</span>
+                                                            </label>
+                                                            <label class="custom-control custom-radio">
+                                                                <input value="nopadece" name="PadeceEnfermedad" type="radio" class="custom-control-input">
+                                                                <span class="custom-control-label">No</span>
+                                                            </label>
+                                                            
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6" style="display : none" id="cual">
+                                                    <div class="form-group">
+                                                        <label for="wjobTitle2">Cuales :</label>
+                                                        <input type="text" class="form-control" id="wjobTitle2">
+                                                    </div>
+                                                </div>
+                                            
+                                            </div>
+                                            
+                                            
+                                            
                                         </div>
+                                        <h3>Con Quien Vive</h3>                              
+                                        
                                         <div class="row"  id="ViveCon">
                                             <div class="col-md-6">
                                                 <div class="form-group">
@@ -1800,7 +1849,7 @@
                                                 
                                             </div>
                                         </div>
-                                        <h3>Salud</h3>
+                                        <!--<h3>Salud</h3>
                                         <div class="row" id="salud" style="display : none" >
                                             <div class="col-md-6">
                                                 <div class="form-group">
@@ -1855,7 +1904,7 @@
                                                     <input type="text" class="form-control" id="wfirstName2" name="firstName">
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div>-->
                                         <h3>INVEA</h3>                            
                                         <h4>Datos Establecimiento o Inmueble</h4>  
                                         <div class="row" style="display : none" id="EstablecimientoInmueble">
