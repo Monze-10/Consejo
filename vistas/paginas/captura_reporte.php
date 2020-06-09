@@ -1,3 +1,44 @@
+<?php
+
+
+    
+    include "controladores/captura.controlador.php";
+    include "modelos/captura.modelo.php";
+
+    $captura = new ControladorCaptura();
+
+    // $ciudad =  $captura -> crtMostrarCiudad();
+
+    // $pais =  $captura -> crtMostrarPais();
+    // $necesidad = $captura -> crtMostrarNecesidad();
+    // $detalle = $captura -> crtMostrarDetalle();
+    // $delito = $captura -> crtMostrarDetalle();
+    // $edad = $captura -> crtMostrarEdad();
+    // $sexo = $captura -> crtMostrarSexo();
+    // $alcaldia = $captura -> crtMostrarAlcaldia();
+    // $canaliza = $captura -> crtMostrarCanaliza();
+    // $conducta = $captura -> crtMostrarConducta();
+    // $contacto = $captura -> crtMostrarContacto();
+    // $forma = $captura -> crtMostrarForma();
+    // $hechos = $captura -> ctrMostrarHecho();
+    // $llamada = $captura -> ctrMostrarLlamada();
+    // $escolar = $captura -> ctrMostrarEscolar();
+    // $ocupacion = $captura -> ctrMostrarOcupacion();
+    // $civil = $captura -> ctrMostrarEdoCivil();
+    // $social = $captura -> ctrMostrarSsocial();
+    // $etapa = $captura -> ctrMostrarEtapa();
+    // $enfermedad = $captura -> ctrMostrarEnfermedad();
+    // $vive = $captura -> ctrMostrarVive();
+    // $observa = $captura -> ctrMostrarObserva();
+    // $parentesco = $captura -> ctrMostrarParentesco();
+    // $age = $captura -> ctrMostrarAge();
+    // $ocupa = $captura -> ctrMostrarOcupa();
+    // $esc = $captura -> ctrMostrarGrado();
+    // $mal= $captura -> ctrMostrarMaltrato();
+    // $desde = $captura -> ctrMostrarDesdeC();
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -78,17 +119,17 @@
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
                         <li class="nav-devider"></li>
-                        <li> <a class="has-arrow waves-effect waves-dark" href="./" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Inicio</span></a>
+                        <li> <a class="has-arrow waves-effect waves-dark" href="./" aria-expanded="false"><i class="mdi mdi-home-outline"></i><span class="hide-menu">Inicio</span></a>
                         </li>
-                        <li class="active"> <a class="has-arrow waves-effect waves-dark" aria-expanded="false"><i class="mdi mdi-bullseye"></i><span class="hide-menu">Captura de reporte</span></a>
+                        <li class="active"> <a class="has-arrow waves-effect waves-dark" aria-expanded="false"><i class="mdi mdi-format-list-bulleted-type"></i><span class="hide-menu">Captura de reporte</span></a>
                         </li>
-                        <li class="three-column"> <a class="has-arrow waves-effect waves-dark"  aria-expanded="false"><i class="mdi mdi-chart-bubble"></i><span class="hide-menu">Validación</span></a>
+                        <li class="three-column"> <a class="has-arrow waves-effect waves-dark"  aria-expanded="false"><i class="mdi mdi-checkbox-marked-circle-outline"></i><span class="hide-menu">Validación</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="./?page=validar_reporte">Validar reporte</a></li>
                             </ul>
                         </li>
 
-                        <li> <a class="has-arrow waves-effect waves-dark" aria-expanded="false"><i class="mdi mdi-table"></i><span class="hide-menu">Seguimiento</span></a>
+                        <li> <a class="has-arrow waves-effect waves-dark" aria-expanded="false"><i class="mdi mdi-chart-bar"></i><span class="hide-menu">Seguimiento</span></a>
                             <ul aria-expanded="false" class="collapse">
                                 <li><a href="./?page=seguimiento_consulta">Consulta</a></li>
                                 <li><a href="./?page=seguimiento_exportacion">Exportación</a></li>
@@ -212,11 +253,10 @@
                                             <div class="form-group">
                                             <label for="wlocation2"> Sexo: <span class="danger">*</span> </label>
                                                 <select class="custom-select form-control" id="" name="">
-                                                    
                                                     <option value="">Selecciona una opcion</option>
-                                                    <?php foreach ($sexo as $csexo): ?>
-                                                        <option value="<?php echo $csexo['CON_ID']?>"><?php echo $csexo['CON_DESCRIPCION']?></option>
-                                                    <?php endforeach; ?>
+                                                    <?php foreach($captura -> crtMostrarSexo() as $csexo){ ?>                                           
+                                                        <option value='<?php echo $csexo['CON_ID']; ?>'><?php echo $csexo['CON_DESCRIPCION']; ?></option>
+                                                    <?php } ?>
                                                 </select>        
                                                     
                                             </div>
@@ -250,9 +290,9 @@
                                                 <select class="custom-select form-control" id="" name="">
                                                     
                                                     <option value="">Selecciona una opcion</option>
-                                                    <?php foreach ($ciudad as $estado): ?>
-                                                        <option value="<?php echo $estado['C_ESTADO']?>"><?php echo $estado['D_ESTADO']?></option>
-                                                    <?php endforeach; ?>
+                                                    <?php foreach ($captura -> crtMostrarCiudad() as $estado){ ?>
+                                                        <option value="<?php echo $estado['C_ESTADO']; ?>"><?php echo $estado['D_ESTADO']; ?></option>
+                                                    <?php } ?>
                                                 </select>        
                                                     
                                             </div>
@@ -265,10 +305,9 @@
                                                 <select class="custom-select form-control " id="" name="">
                                                     
                                                     <option value=" ">Selecciona una opciòn </option>
-                                                    <?php foreach($alcaldia as $calcaldia) : ?>
-                                                        <option value="<?php echo $calcaldia['CON_ID']?>"><?php echo $calcaldia['CON_DESCRIPCION']?></option>
-
-                                                    <?php endforeach; ?>    
+                                                    <?php foreach($alcaldia as $calcaldia) { ?>
+                                                        <option value="<?php echo $calcaldia['CON_ID']; ?>"><?php echo $calcaldia['CON_DESCRIPCION']; ?></option>
+                                                    <?php } ?>    
                                                     
                                                 </select>
                                             </div>
@@ -280,10 +319,10 @@
                                                 <select class="custom-select form-control " id="" name="">
                                                     
                                                     <option value=" ">Selecciona una opciòn </option>
-                                                    <?php foreach($pais as $paises) : ?>
-                                                        <option value="<?php echo $paises['PA_ID']?>"><?php echo $paises['PA_NOMBRE']?></option>
+                                                    <?php foreach($captura -> crtMostrarPais() as $paises){ ?>
+                                                        <option value="<?php echo $paises['PA_ID']; ?>"><?php echo $paises['PA_NOMBRE']; ?></option>
 
-                                                    <?php endforeach; ?>    
+                                                    <?php } ?>    
                                                     
                                                 </select>
                                             </div>
@@ -437,6 +476,7 @@
     <script src="vistas/plugins/wizard/jquery.validate.min.js"></script>
     <script src="vistas/js/sweetalert.min.js"></script>
     <script src="vistas/plugins/wizard/steps.js"></script>
+    <script src="vistas/js/RadioButtom.js"></script>
     <script src="vistas/js/script.js"></script>
 </body>
 

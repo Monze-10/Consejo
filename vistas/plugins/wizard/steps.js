@@ -56,7 +56,7 @@ $(".validation-wizard").steps({
 function processData(){
     // form.submit();
     swal("Datos guardados correctamente", "","success"). then(function() {
-        window.location = "./?page=captura_reporte";
+        window.location = "./";
     });
 
     // swal({
