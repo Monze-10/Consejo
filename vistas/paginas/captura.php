@@ -1765,48 +1765,6 @@
                                                 </div>
                                             
                                             </div>
-                                            <h3>Con Quien Vive</h3> 
-                                            <div class="row" id="salud"  >
-                                        
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label>¿tiene algùna incapacidad fìsica para comprar, preparar y/o consumir sus alimentos:</label>
-                                                            <label class="custom-control custom-radio">
-                                                                <input value="IncaSi" name="Incapacidad" type="radio" class="custom-control-input">
-                                                                <span class="custom-control-label">Si</span>
-                                                            </label>
-                                                            <label class="custom-control custom-radio">
-                                                                <input value="IncaNo" name="Incapacidad" type="radio" class="custom-control-input">
-                                                                <span class="custom-control-label">No</span>
-                                                            </label>
-                                                            
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label>¿Padece algun(as) enfermedad(es)?:</label>
-                                                            
-                                                            <label class="custom-control custom-radio">
-                                                                <input value="padece" name="PadeceEnfermedad" type="radio" class="custom-control-input">
-                                                                <span class="custom-control-label">Si</span>
-                                                            </label>
-                                                            <label class="custom-control custom-radio">
-                                                                <input value="nopadece" name="PadeceEnfermedad" type="radio" class="custom-control-input">
-                                                                <span class="custom-control-label">No</span>
-                                                            </label>
-                                                            
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6" style="display : none" id="cual">
-                                                    <div class="form-group">
-                                                        <label for="wjobTitle2">Cuales :</label>
-                                                        <input type="text" class="form-control" id="wjobTitle2">
-                                                    </div>
-                                                </div>
-                                            
-                                            </div>
-                                            
-                                            
                                             
                                         </div>
                                         <h3>Con Quien Vive</h3>                              
