@@ -38,6 +38,36 @@
 
 		}
 
+		static public function crtMostrarCatalogo($id_necesidad){
+
+			$tabla = "detalle_catalogos";
+
+			$respuesta = ModeloCaptura::mdlMostrarCatalogo($tabla, $id_necesidad);
+
+			return $respuesta;
+
+		}
+
+		static public function crtMostrarProgramaEspecial(){
+
+			$tabla = "contenido_catalogos";
+
+			$respuesta = ModeloCaptura::mdlMostrarProgramaEspecial($tabla);
+
+			return $respuesta;
+
+		}
+
+		static public function crtMostrarTerminacionLLamada(){
+
+			$tabla = "contenido_catalogos";
+
+			$respuesta = ModeloCaptura::mdlMostrarTerminacionLlamada($tabla);
+
+			return $respuesta;
+
+		}
+
 		static public function crtMostrarDetalle(){
 
 			$tabla = "detalle_catalogos";

@@ -36,7 +36,46 @@ class ModeloCaptura{
 
 	static public function mdlMostrarNecesidad($tabla){
 
-		$stmt = Conexion::conectar() -> prepare("SELECT CAT_ID, CON_ID, CON_DESCRIPCION FROM $tabla WHERE CAT_ID = 85 ");
+		$stmt = Conexion::conectar() -> prepare("SELECT CAT_ID, CON_ID, CON_DESCRIPCION FROM $tabla WHERE CAT_ID = 85 ORDER BY CON_ID ASC;");
+
+		$stmt -> execute();
+
+		return $stmt -> fetchall();
+
+		$stmt -> close();
+
+		$stmt = null;
+	}
+
+	static public function mdlMostrarCatalogo($tabla, $id_necesidad){
+
+		$stmt = Conexion::conectar() -> prepare("SELECT CON_ID, CON_DESCRIPCION FROM $tabla WHERE CAT_ID = $id_necesidad ORDER BY CON_ID ASC;");
+
+		$stmt -> execute();
+
+		return $stmt -> fetchall();
+
+		$stmt -> close();
+
+		$stmt = null;
+	}
+
+	static public function mdlMostrarTerminacionLlamada($tabla){
+
+		$stmt = Conexion::conectar() -> prepare("SELECT * FROM $tabla WHERE CAT_ID = 88 ORDER BY CON_ID ASC;");
+
+		$stmt -> execute();
+
+		return $stmt -> fetchall();
+
+		$stmt -> close();
+
+		$stmt = null;
+	}
+
+	static public function mdlMostrarProgramaEspecial($tabla){
+
+		$stmt = Conexion::conectar() -> prepare("SELECT * FROM $tabla WHERE CAT_ID = 89 ORDER BY CON_ID ASC;");
 
 		$stmt -> execute();
 
