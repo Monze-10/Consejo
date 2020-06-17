@@ -423,6 +423,47 @@ class ModeloCaptura{
 		$stmt = null;
 	}
 
+	public static function mdlMostrarMarcaVehiculo(){
+
+		$stmt = Conexion::conectar() -> prepare("SELECT M_CVEMARCA, M_DESCMARCA FROM marca_vehiculo ORDER BY M_DESCMARCA ASC;");
+
+		$stmt -> execute();
+
+		return $stmt -> fetchall();
+
+		$stmt -> close();
+
+		$stmt = null;
+
+	}
+
+	public static function mdlMostrarModeloVehiculo($id_marca){
+
+		$stmt = Conexion::conectar() -> prepare("SELECT M_CVESUBMARCA, M_DESCSUBMARCA FROM sub_marca_vehiculo WHERE M_CVEMARCA = $id_marca ORDER BY M_DESCSUBMARCA ASC;");
+
+		$stmt -> execute();
+
+		return $stmt -> fetchall();
+
+		$stmt -> close();
+
+		$stmt = null;
+
+	}
+
+	public static function mdlMostrarColores(){
+
+		$stmt = Conexion::conectar() -> prepare("SELECT C_CVECOLOR, C_DESCCOLOR FROM colores ORDER BY C_DESCCOLOR ASC;");
+
+		$stmt -> execute();
+
+		return $stmt -> fetchall();
+
+		$stmt -> close();
+
+		$stmt = null;
+
+	}
 	
 
 }

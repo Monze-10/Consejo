@@ -99,6 +99,100 @@ $('#LugarHechosSwitch').on('switchChange.bootstrapSwitch', function (event, stat
 
 // --------------------------------------------------------------------------------------------------------------------------- //
 
+// Función para ocultar y/o desocultar autos.
+
+$('#ReportanAutoSwitch').on('switchChange.bootstrapSwitch', function (event, state) {
+
+    $('#TempMarcaVehiculo').html('<option value="" disabled selected>Marca...</option>');
+    $('#TempModeloVehiculo').html('<option value="" disabled selected>Modelo...</option>');
+    $('#TempColorVehiculo').html('<option value="" disabled selected>Color...</option>');
+    $('#TempPlacasVehiculo').val('');
+    $('#TempCaracteristicasVehiculo').val('');
+    $('#TempModeloVehiculo').prop('disabled', true);
+    
+    if(state){
+        $.ajax({
+            type: 'GET',
+            dataType: "json",
+            url: 'vistas/ViewComponentes.php?marca_vehiculo=get',
+            success: function (data) {
+              for (var key in data) {
+                $('#TempMarcaVehiculo').append("<option value='" + data[key].M_CVEMARCA + "'>" + data[key].M_DESCMARCA + "</option>");
+              }
+            }
+        });
+
+        $.ajax({
+            type: 'GET',
+            dataType: "json",
+            url: 'vistas/ViewComponentes.php?colores=get',
+            success: function (data) {
+              for (var key in data) {
+                $('#TempColorVehiculo').append("<option value='" + data[key].C_CVECOLOR + "'>" + data[key].C_DESCCOLOR + "</option>");
+              }
+            }
+        });
+
+        $(".ReportanAutoOpciones").fadeIn('fast');
+    }else{
+        $(".ReportanAutoOpciones").fadeOut('fast');
+        $(".AutosTablaContainer").fadeOut('fast');
+        $(".ReportanAutoDatos").remove();
+        $(".VehiculosAdded").remove();
+    }
+
+});
+
+function initMarcas(){
+
+    $('#TempMarcaVehiculo').html('<option value="" disabled selected>Marca...</option>');
+    $('#TempColorVehiculo').html('<option value="" disabled selected>Color...</option>');
+
+    $.ajax({
+        type: 'GET',
+        dataType: "json",
+        url: 'vistas/ViewComponentes.php?marca_vehiculo=get',
+        success: function (data) {
+          for (var key in data) {
+            $('#TempMarcaVehiculo').append("<option value='" + data[key].M_CVEMARCA + "'>" + data[key].M_DESCMARCA + "</option>");
+          }
+        }
+    });
+
+    $.ajax({
+        type: 'GET',
+        dataType: "json",
+        url: 'vistas/ViewComponentes.php?colores=get',
+        success: function (data) {
+          for (var key in data) {
+            $('#TempColorVehiculo').append("<option value='" + data[key].C_CVECOLOR + "'>" + data[key].C_DESCCOLOR + "</option>");
+          }
+        }
+    });
+
+}
+
+function getModelo(){
+
+    $('#TempModeloVehiculo').html('<option value="" disabled selected>Modelo...</option>');
+    $('#TempModeloVehiculo').prop('disabled', true);
+
+    $.ajax({
+        type: 'GET',
+        dataType: "json",
+        url: 'vistas/ViewComponentes.php?id_marca='+$("#TempMarcaVehiculo").val(),
+        success: function (data) {
+          for (var key in data) {
+            $('#TempModeloVehiculo').append("<option value='" + data[key].M_CVESUBMARCA + "'>" + data[key].M_DESCSUBMARCA + "</option>");
+          }
+        }
+    });
+
+    $('#TempModeloVehiculo').prop('disabled', false);
+}
+
+// --------------------------------------------------------------------------------------------------------------------------- //
+
 // Función para elegir el orígen del denunciante.
 
     function ShowOrigen(){
@@ -522,13 +616,6 @@ $('#LugarHechosSwitch').on('switchChange.bootstrapSwitch', function (event, stat
 
 
 
-
-
-
-
-
-
-
 // documento para Reportan autos
 $(document).ready(function() {
     $("input[type=radio]").click(function(event){
@@ -544,6 +631,8 @@ $(document).ready(function() {
         }
     });
 });
+
+
     // funcion para Programas Especiales
 $(document).ready(function() {
     $("input[type=radio]").click(function(event){

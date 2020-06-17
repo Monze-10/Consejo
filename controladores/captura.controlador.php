@@ -343,6 +343,30 @@
 
 		}
 
+		public static function ctrMostrarMarcaVehiculo(){
+
+			$respuesta = ModeloCaptura::mdlMostrarMarcaVehiculo();
+
+			return $respuesta;
+
+		}
+
+		public static function ctrMostrarModeloVehiculo($id_marca){
+
+			$respuesta = ModeloCaptura::mdlMostrarModeloVehiculo($id_marca);
+
+			return $respuesta;
+
+		}
+
+		public static function ctrMostrarColores(){
+
+			$respuesta = ModeloCaptura::mdlMostrarColores();
+
+			return $respuesta;
+
+		}
+
 
 	}
 

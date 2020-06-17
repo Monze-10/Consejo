@@ -2402,106 +2402,117 @@
                                                 </div>
 
                                             </div>
+                                          
+                                            <h3 class="box-title">¿Reportan autos?</h3> 
+                                            <hr class="m-t-0 m-b-20">
 
-                                            <!-- <div class="row">
-                                                <div class="col-md-12">
-                                                    <div class="form-group">
-                                                        <label>¿Lugar de los hechos?:</label>
-                                                        <label class="custom-control custom-radio">
-                                                            <input value="LugarSi" name="LugHechos" type="radio" class="custom-control-input">
-                                                            <span class="custom-control-label">Si</span>
-                                                        </label>
-                                                        <label class="custom-control custom-radio">
-                                                            <input value="LugarNo" name="LugHechos" type="radio" class="custom-control-input">
-                                                            <span class="custom-control-label">No</span>
-                                                        </label> 
-                                                    </div>
-                                                </div>
-                                            </div> -->
-                                        
-                                            <div class="row" id="LugarHechos" style="display: none">
-                                                <h3>Lugar de los hechos</h3>
-                                                
-                                            </div>    
-
-                
                                             <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label>¿Reportan autos? :</label>
-                                                            <label class="custom-control custom-radio">
-                                                                <input value="AutoSi" name="ReAutos" type="radio" class="custom-control-input">
-                                                                <span class="custom-control-label">Si</span>
+
+                                                <div class="col-md-2">
+                                                    <div class="form-group bt-switch" style="margin-top:2px;">
+                                                        <center>
+                                                            <label class="custom-control">
+                                                                    <input value="Si" data-size="normal" id="ReportanAutoSwitch" name="ReportanAutoSwitch" type="checkbox" data-on-color="success" data-off-color="danger" data-on-text="Si" data-off-text="No">
                                                             </label>
-                                                            <label class="custom-control custom-radio">
-                                                                <input value="AutoNo" name="ReAutos" type="radio" class="custom-control-input">
-                                                                <span class="custom-control-label">No</span>
-                                                            </label> 
-                                                            
+                                                        </center>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-5 ReportanAutoOpciones" style="display: none; margin-bottom:-10px;">
+                                                    <div class="form-group">
+                                                    <button type="button" class="btn btn-info btn-rounded" data-toggle="modal" data-target="#ModalReportanAuto" onclick="initMarcas();"><i class="fa fa-plus-circle"></i> Añadir auto</button>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                            <div id="ModalReportanAuto" class="modal bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="vcenter" aria-hidden="true" data-backdrop="static">
+                                                <div class="modal-dialog modal-dialog-centered modal-lg">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h4 class="modal-title" id="vcenter" style="font-family:'Product Sans'; font-weight:bold;">Características del auto</h4>
+                                                        </div>
+                                                        <div class="modal-body">
+
+                                                            <div class="row">
+
+                                                                <div class="col-md-3">
+                                                                    <div class="form-group">
+                                                                        <label for="TempMarcaVehiculo">Marca</label>
+                                                                        <select class="custom-select form-control" id="TempMarcaVehiculo" name="TempMarcaVehiculo" onchange="getModelo();">
+                                                                            <option value="" disabled selected>Marca...</option>                   
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-md-3">
+                                                                    <div class="form-group">
+                                                                        <label for="TempModeloVehiculo">Modelo</label>
+                                                                        <select class="custom-select form-control" id="TempModeloVehiculo" name="TempModeloVehiculo" disabled onchange="showSaveVehiculo();">
+                                                                            <option value="" disabled selected>Modelo...</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-md-3">
+                                                                    <div class="form-group">
+                                                                        <label for="TempColorVehiculo">Color</label>
+                                                                        <select class="custom-select form-control" id="TempColorVehiculo" name="TempColorVehiculo">
+                                                                            <option value="" disabled selected>Color...</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-md-3">
+                                                                    <div class="form-group">
+                                                                        <label for="TempPlacasVehiculo">No. de placas</label>
+                                                                        <input type="text" class="form-control" id="TempPlacasVehiculo" name="TempPlacasVehiculo">
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-md-12">
+                                                                    <div class="form-group">
+                                                                        <label for="TempCaracteristicasVehiculo">Características Particulares</label>
+                                                                        <textarea rows="4" class="form-control" id="TempCaracteristicasVehiculo" name="TempCaracteristicasVehiculo"></textarea>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-default" data-dismiss="modal" style="font-family:'Roboto';" onclick="EmptyReportanAutoTemp();">Cancelar</button>
+                                                            <button id="TempVehiculoAdd" type="button" class="btn btn-info" data-dismiss="modal" style="font-family:'Roboto'; display:none;" onclick="addVehiculoToTable();">Añadir</button>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        
-                                            <div class="row" id="div1" style="display: none">
-                                                <h3>Reportan Auto</h3>       
-                                                <div class="row">                 
-                                                    
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="wlocation2"> Marca : <span class="danger">*</span> </label>
-                                                            <select class="custom-select form-control" id="" name="marca_vehiculo">
-                                                                
-                                                                <option value=" ">Selecciona una opciòn </option>
-                                                                <?php foreach($marca_vehiculo as $key => $data) : ?>
-                                                                    <option value="<?php echo $data->M_CveMarca ?>"><?php echo $data->M_DescMarca ?></option>
 
-                                                                <?php endforeach; ?>    
-                                                                
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="wlocation2"> Submarca : <span class="danger">*</span> </label>
-                                                            <select class="custom-select form-control" id="" name="marca_vehiculo">
-                                                                
-                                                                <option value=" ">Selecciona una opciòn </option>
-                                                                <?php foreach($marca_vehiculo as $key => $data) : ?>
-                                                                    <option value="<?php echo $data->M_CveMarca ?>"><?php echo $data->M_DescMarca ?></option>
+                                            <div class="row AutosTablaContainer" style="display:none;">
 
-                                                                <?php endforeach; ?>    
-                                                                
-                                                            </select>
-                                                        </div>
+                                                <div class="col-md-12 AutosTabla">
+                                                    <h4 class="card-title">Autos</h4>
+                                                    <div class="table-responsive">
+                                                        <table class="table color-table muted-table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th class='align-middle'>Marca</th>
+                                                                    <th class='align-middle'>Modelo</th>
+                                                                    <th class='align-middle'>Color</th>
+                                                                    <th class='align-middle'>No. de placas</th>
+                                                                    <th class='align-middle'>Características</th>
+                                                                    <th></th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody class='AutosRows'>
+                                                            </tbody>
+                                                        </table>
                                                     </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="wlocation2"> Color : <span class="danger">*</span> </label>
-                                                            <select class="custom-select form-control" id="" name="colores">
-                                                                
-                                                                <option value=" ">Selecciona una opciòn </option>
-                                                                <?php foreach($colores as $key => $data) : ?>
-                                                                    <option value="<?php echo $data->C_CveColor ?>"><?php echo $data->C_DescColor ?></option>
+                                                </div>
 
-                                                                <?php endforeach; ?>    
-                                                                
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="wfirstName2">Número de placas : <span class="danger">*</span> </label>
-                                                            <input type="text" class="form-control" id="wfirstName2" name="firstName">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-12">
-                                                        <div class="form-group">
-                                                            <label for="wfirstName2">Caracteristicas Particulares : <span class="danger">*</span> </label>
-                                                            <input type="text" class="form-control" id="wfirstName2" name="firstName">
-                                                        </div>
-                                                    </div>
-                                                </div>           
                                             </div>
+
+
                                             <div class="row">
                                                 
                                                 <div class="col-md-6">
