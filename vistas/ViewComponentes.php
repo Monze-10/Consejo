@@ -60,6 +60,39 @@
 
         echo json_encode($programa_especial);
          
+    }else if (isset($_GET["marca_vehiculo"]) && $_GET["marca_vehiculo"] == "get"){
+
+        include "../modelos/conexion.php";
+        include "../controladores/captura.controlador.php";
+        include "../modelos/captura.modelo.php";
+
+        $captura = new ControladorCaptura();
+        $marca_vehiculo = $captura -> ctrMostrarMarcaVehiculo();
+
+        echo json_encode($marca_vehiculo);
+         
+    }else if (isset($_GET["id_marca"])){
+
+        include "../modelos/conexion.php";
+        include "../controladores/captura.controlador.php";
+        include "../modelos/captura.modelo.php";
+
+        $captura = new ControladorCaptura();
+        $modelo_vehiculo = $captura -> ctrMostrarModeloVehiculo($_GET["id_marca"]);
+
+        echo json_encode($modelo_vehiculo);
+         
+    }else if (isset($_GET["colores"]) && $_GET["colores"] == "get"){
+
+        include "../modelos/conexion.php";
+        include "../controladores/captura.controlador.php";
+        include "../modelos/captura.modelo.php";
+
+        $captura = new ControladorCaptura();
+        $colores = $captura -> ctrMostrarColores();
+
+        echo json_encode($colores);
+         
     }
 
 ?>

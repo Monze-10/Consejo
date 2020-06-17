@@ -95,6 +95,7 @@ function EmptyLugarHechosTemp(){
 }
 
 count = $(".LugarHechosDireccion").length;
+countVehiculo = $(".VehiculosAdded").length;
 
 function addLugarHechosToTable(){
 
@@ -118,4 +119,48 @@ function countLugarHechosDireccion(){
   }else{
     $(".LugarHechosTablaContainer").fadeOut();
   }
+}
+
+
+function EmptyReportanAutoTemp(){
+
+  $("#TempVehiculoAdd").fadeOut('fast');
+
+  $('#TempMarcaVehiculo').html('<option value="" disabled selected>Marca...</option>');
+  $('#TempModeloVehiculo').html('<option value="" disabled selected>Modelo...</option>');
+  $('#TempColorVehiculo').html('<option value="" disabled selected>Color...</option>');
+  $('#TempPlacasVehiculo').val('');
+  $('#TempCaracteristicasVehiculo').val('');
+  $('#TempModeloVehiculo').prop('disabled', true);
+
+}
+
+function showSaveVehiculo(){
+
+  $("#TempVehiculoAdd").fadeIn('fast');
+
+}
+
+function countTotalVehiculos(){
+  if($(".VehiculosAdded").length != 0){
+    $(".AutosTablaContainer").fadeIn();
+  }else{
+    $(".AutosTablaContainer").fadeOut();
+  }
+}
+
+function DeleteVehiculo(id){
+  $(id).remove();
+  countTotalVehiculos();
+  EmptyReportanAutoTemp();
+}
+
+function addVehiculoToTable(){
+
+  countVehiculo = countVehiculo + 1; 
+
+  $(".AutosRows").append("<tr id='VehiculoAdded" + countVehiculo  + "' class='VehiculosAdded'><td class='align-middle'><input class='no-style' type='hidden' name='MarcaVehiculo[]' value='" + $("#TempMarcaVehiculo").val() + "' readonly>" + $("#TempMarcaVehiculo option:selected").text() + "</td><td class='align-middle'><input class='no-style' type='hidden' name='ModeloVehiculo[]' value='" + $("#TempModeloVehiculo").val() + "' readonly>" + $("#TempModeloVehiculo option:selected").text() + "</td><td class='align-middle'><input class='no-style' type='hidden' name='ColorVehiculo[]' value='" + $("#TempColorVehiculo").val() + "' readonly>" + $("#TempColorVehiculo option:selected").text() + "</td><td class='align-middle'><input class='no-style' type='hidden' name='PlacasVehiculo[]' value='" + $("#TempPlacasVehiculo").val() + "' readonly>" + $("#TempPlacasVehiculo").val() + "</td><td class='align-middle'><input class='no-style' type='hidden' name='CaracteristicasVehiculo[]' value='" + $("#TempCaracteristicasVehiculo").val() + "' readonly>" + $("#TempCaracteristicasVehiculo").val() + "</td><td class='align-middle'><button type='button' class='btn btn-danger btn-circle' style='z-index:20!important;' onclick='DeleteVehiculo($(\"#VehiculoAdded" + countVehiculo + "\"));'><i class='fa fa-trash'></i></button></td></tr>");
+  countTotalVehiculos();
+  EmptyReportanAutoTemp();
+
 }
