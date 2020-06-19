@@ -1775,7 +1775,7 @@
                                             </div>
                                             
                                         </div>
-                                        <h3>Con Quien Vive</h3>                              
+                                        <!--<h3>Con Quien Vive</h3>                              
                                         
                                         <div class="row"  id="ViveCon">
                                             <div class="col-md-6">
@@ -1871,7 +1871,7 @@
                                                 </div>
                                             </div>
                                         </div>-->
-                                        <h3>INVEA</h3>                            
+                                        <!--<h3>INVEA</h3>                            
                                         <h4>Datos Establecimiento o Inmueble</h4>  
                                         <div class="row" style="display : none" id="EstablecimientoInmueble">
                                             <div class="col-md-6">
@@ -2230,7 +2230,7 @@
                                                             
                                                     </div>
                                                 </div>
-                                            </div>    
+                                            </div>-->    
                                         </section>
 
 
