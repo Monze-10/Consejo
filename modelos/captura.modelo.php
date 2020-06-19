@@ -86,7 +86,7 @@ class ModeloCaptura{
 		$stmt = null;
 	}
 
-		static public function mdlMostrarDetalle($tabla){
+	static public function mdlMostrarDetalle($tabla){
 
 		$stmt = Conexion::conectar() -> prepare("SELECT CAT_ID, CON_ID, CON_DESCRIPCION FROM $tabla WHERE CAT_ID= 3 OR CAT_ID=2 OR CAT_ID=6 OR CAT_ID=7 OR CAT_ID=12 ORDER BY CAT_ID ASC ");
 
@@ -465,7 +465,17 @@ class ModeloCaptura{
 
 	}
 	
+	public static function mdlContarTelefonos($telefono){
+		$stmt = Conexion::conectar() -> prepare("SELECT Count(R_IdReg) TOTAL FROM reporteciudadano WHERE R_IdenLlamadas = $telefono;");
 
+		$stmt -> execute();
+
+		return $stmt -> fetchall();
+
+		$stmt -> close();
+
+		$stmt = null;
+	}
 }
 
 
