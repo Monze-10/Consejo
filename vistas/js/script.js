@@ -1,5 +1,6 @@
 document.getElementById("temp_lugar_hechos_cp").addEventListener("keyup", function () {
 
+  
   if ($(this).val().length == 5) {
 
     $.ajax({
