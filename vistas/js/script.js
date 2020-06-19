@@ -96,6 +96,7 @@ function EmptyLugarHechosTemp(){
 
 count = $(".LugarHechosDireccion").length;
 countVehiculo = $(".VehiculosAdded").length;
+countPersona = $(".PersonasAdded").length;
 
 function addLugarHechosToTable(){
 
@@ -107,10 +108,26 @@ function addLugarHechosToTable(){
 
 }
 
+function addPersonaToTable(){
+
+  countPersona = countPersona + 1; 
+
+  $(".PersonasRows").append("<tr id='Persona" + countPersona  + "' class='Personas'><td class='align-middle'><input class='no-style' type='hidden' name='persona_reportada_nombre[]' value='" + $("#TempPersonaDenunciadaNombre").val() + "' readonly><input class='no-style' type='hidden' name='persona_reportada_apellido_paterno[]' value='" + $("#TempPersonaDenunciadaApellidoPaterno").val() + "' readonly><input class='no-style' type='hidden' name='persona_reportada_apellido_materno[]' value='" + $("#TempPersonaDenunciadaApellidoMaterno").val() + "' readonly>" + $("#TempPersonaDenunciadaNombre").val() + " " + $("#TempPersonaDenunciadaApellidoPaterno").val() + " " + $("#TempPersonaDenunciadaApellidoMaterno").val() + "</td><td class='align-middle'><input class='no-style' type='hidden' name='persona_reportada_alias[]' value='" + $("#TempPersonaDenunciadaAlias").val() + "' readonly>" + $("#TempPersonaDenunciadaAlias").val() + "</td><td class='align-middle'><input class='no-style' type='hidden' name='persona_reportada_ocupacion[]' value='" + $("#TempPersonaDenunciadaOcupacion").val() + "' readonly>" + $("#TempPersonaDenunciadaOcupacion").val() + "</td><td class='align-middle'><input class='no-style' type='hidden' name='persona_reportada_edad[]' value='" + $("#TempPersonaDenunciadaEdad").val() + "' readonly>" + $("#TempPersonaDenunciadaEdad").val() + "</td><td class='align-middle'><input class='no-style' type='hidden' name='persona_reportada_domicilio[]' value='" + $("#TempPersonaDenunciadaDomicilio").val() + "' readonly>" + $("#TempPersonaDenunciadaDomicilio").val() + "</td><td class='align-middle'><input class='no-style' type='hidden' name='persona_reportada_señas[]' value='" + $("#TempPersonaDenunciadaSeñas").val() + "' readonly>" + $("#TempPersonaDenunciadaSeñas").val() + "</td><td class='align-middle'><input class='no-style' type='hidden' name='persona_reportada_color_ojos[]' value='" + $("#TempPersonaDenunciadaColorOjos").val() + "' readonly>" + $("#TempPersonaDenunciadaColorOjos").val() + "</td><td class='align-middle'><input class='no-style' type='hidden' name='persona_reportada_nariz[]' value='" + $("#TempPersonaDenunciadaNariz").val() + "' readonly>" + $("#TempPersonaDenunciadaNariz").val() + "</td><td class='align-middle'><input class='no-style' type='hidden' name='persona_reportada_color_cabello[]' value='" + $("#TempPersonaDenunciadaColorCabello").val() + "' readonly>" + $("#TempPersonaDenunciadaColorCabello").val() + "</td><td class='align-middle'><input class='no-style' type='hidden' name='persona_reportada_cantidad_cabello[]' value='" + $("#TempPersonaDenunciadaCantidadCabello").val() + "' readonly>" + $("#TempPersonaDenunciadaCantidadCabello").val() + "</td><td class='align-middle'><input class='no-style' type='hidden' name='persona_reportada_boca[]' value='" + $("#TempPersonaDenunciadaBoca").val() + "' readonly>" + $("#TempPersonaDenunciadaBoca").val() + "</td><td class='align-middle'><input class='no-style' type='hidden' name='persona_reportada_complexion[]' value='" + $("#TempPersonaDenunciadaComplexion").val() + "' readonly>" + $("#TempPersonaDenunciadaComplexion").val() + "</td><td class='align-middle'><input class='no-style' type='hidden' name='persona_reportada_color_piel[]' value='" + $("#TempPersonaDenunciadaColorPiel").val() + "' readonly>" + $("#TempPersonaDenunciadaColorPiel").val() + "</td><td class='align-middle'><input class='no-style' type='hidden' name='persona_reportada_cejas[]' value='" + $("#TempPersonaDenunciadaCejas").val() + "' readonly>" + $("#TempPersonaDenunciadaCejas").val() + "</td><td class='align-middle'><button type='button' class='btn btn-danger btn-circle' style='z-index:20!important;' onclick='DeletePersona($(\"#Persona" + countPersona + "\"));'><i class='fa fa-trash'></i></button></td></tr>");
+  countPersonas();
+  EmptyPersonaTemp();
+
+}
+
 function DeleteLugarHechosDireccion(id){
   $(id).remove();
   countLugarHechosDireccion();
   EmptyLugarHechosTemp();
+}
+
+function DeletePersona(id){
+  $(id).remove();
+  countPersonas();
+  EmptyPersonaTemp();
 }
 
 function countLugarHechosDireccion(){
@@ -118,6 +135,14 @@ function countLugarHechosDireccion(){
     $(".LugarHechosTablaContainer").fadeIn();
   }else{
     $(".LugarHechosTablaContainer").fadeOut();
+  }
+}
+
+function countPersonas(){
+  if($(".Personas").length != 0){
+    $(".PersonasTablaContainer").fadeIn();
+  }else{
+    $(".PersonasTablaContainer").fadeOut();
   }
 }
 
