@@ -367,7 +367,12 @@
 
 		}
 
+		public static function ctrContarTelefonos($telefono){
+			
+			$respuesta = ModeloCaptura::mdlContarTelefonos($telefono);
 
+			return $respuesta;
+		}
 	}
 
 ?>
