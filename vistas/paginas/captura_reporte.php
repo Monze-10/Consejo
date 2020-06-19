@@ -2513,294 +2513,237 @@
                                             </div>
 
 
+                                            <h3 class="box-title">¿Reportan personas?</h3> 
+                                            <hr class="m-t-0 m-b-20">
+
                                             <div class="row">
-                                                
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label>¿Reportan Personas? :</label>
-                                                            <label class="custom-control custom-radio">
-                                                                <input value="ReportanPersonasSi" name="RePersonas" type="radio" class="custom-control-input">
-                                                                <span class="custom-control-label">Si</span>
+
+                                                <div class="col-md-2">
+                                                    <div class="form-group bt-switch" style="margin-top:2px;">
+                                                        <center>
+                                                            <label class="custom-control">
+                                                                    <input value="Si" data-size="normal" id="ReportanPersonaSwitch" name="ReportanPersonaSwitch" type="checkbox" data-on-color="success" data-off-color="danger" data-on-text="Si" data-off-text="No">
                                                             </label>
-                                                            <label class="custom-control custom-radio">
-                                                                <input value="ReportanPersonasNo" name="RePersonas" type="radio" class="custom-control-input">
-                                                                <span class="custom-control-label">No</span>
-                                                            </label> 
-                                                            
+                                                        </center>
                                                     </div>
                                                 </div>
-                                            </div>    
-                                        
-                                            <div class="row" id="PersonasDenunciadas" style="display: none">
-                                                <h3>Datos de la(s) Persona(s) Denunciada(s)</h3>
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="wfirstName2">Nombre : <span class="danger">*</span> </label>
-                                                            <input type="text" class="form-control" id="wfirstName2" name="firstName">
-                                                        </div>
+
+                                                <div class="col-md-5 ReportanPersonaOpciones" style="display: none; margin-bottom:-10px;">
+                                                    <div class="form-group">
+                                                    <button type="button" class="btn btn-info btn-rounded" data-toggle="modal" data-target="#ModalReportanPersona"><i class="fa fa-plus-circle"></i> Añadir persona</button>
                                                     </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="wfirstName2">Apellido Paterno : <span class="danger">*</span> </label>
-                                                            <input type="text" class="form-control" id="wfirstName2" name="firstName">
+                                                </div>
+
+                                            </div>
+
+                                            <div id="ModalReportanPersona" class="modal bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="vcenter" aria-hidden="true" data-backdrop="static">
+                                                <div class="modal-dialog modal-dialog-centered modal-lg">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h4 class="modal-title" id="vcenter" style="font-family:'Product Sans'; font-weight:bold;">Datos de la persona denunciada</h4>
                                                         </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="wfirstName2">Apellido Materno : <span class="danger">*</span> </label>
-                                                            <input type="text" class="form-control" id="wfirstName2" name="firstName">
+                                                        <div class="modal-body">
+
+                                                            <div class="row">
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group">
+                                                                        <label for="TempPersonaDenunciadaNombre">Nombre</label>
+                                                                        <input type="text" class="form-control" id="TempPersonaDenunciadaNombre" name="TempPersonaDenunciadaNombre">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group">
+                                                                        <label for="TempPersonaDenunciadaApellidoPaterno">Apellido Paterno</label>
+                                                                        <input type="text" class="form-control" id="TempPersonaDenunciadaApellidoPaterno" name="TempPersonaDenunciadaApellidoPaterno">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <div class="form-group">
+                                                                        <label for="TempPersonaDenunciadaApellidoMaterno">Apellido Materno</label>
+                                                                        <input type="text" class="form-control" id="TempPersonaDenunciadaApellidoMaterno" name="TempPersonaDenunciadaApellidoMaterno">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-5">
+                                                                    <div class="form-group">
+                                                                        <label for="TempPersonaDenunciadaAlias">Alias</label>
+                                                                        <input type="text" class="form-control" id="TempPersonaDenunciadaAlias" name="TempPersonaDenunciadaAlias">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-5">
+                                                                    <div class="form-group">
+                                                                        <label for="TempPersonaDenunciadaOcupacion">Ocupación</label>
+                                                                        <input type="text" class="form-control" id="TempPersonaDenunciadaOcupacion" name="TempPersonaDenunciadaOcupacion">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-2">
+                                                                    <div class="form-group">
+                                                                        <label for="TempPersonaDenunciadaEdad">Edad</label>
+                                                                        <input type="text" class="form-control" id="TempPersonaDenunciadaEdad" name="TempPersonaDenunciadaEdad" onkeypress="return isNumberKey(event)">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label for="TempPersonaDenunciadaDomicilio">Domicilio</label>
+                                                                        <input type="text" class="form-control" id="TempPersonaDenunciadaDomicilio" name="TempPersonaDenunciadaDomicilio">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label for="TempPersonaDenunciadaSeñas">Señas particulares</label>
+                                                                        <input type="text" class="form-control" id="TempPersonaDenunciadaSeñas" name="TempPersonaDenunciadaSeñas">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <h3>Filiación del presunto</h3>
+                                                            <div class="row">
+
+                                                                <div class="col-md-3">
+                                                                    <div class="form-group">
+                                                                        <label for="TempPersonaDenunciadaColorOjos">Color de ojos</label>
+                                                                        <select class="custom-select form-control" id="TempPersonaDenunciadaColorOjos" name="TempPersonaDenunciadaColorOjos">
+                                                                            <option value="Desconoce" selected>Desconoce</option>
+                                                                            <option value="Verdes">Verdes</option>
+                                                                            <option value="Cafés">Cafés</option>
+                                                                            <option value="Negros">Negros</option>
+                                                                            <option value="Azules">Azules</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-md-3">
+                                                                    <div class="form-group">
+                                                                        <label for="TempPersonaDenunciadaNariz">Nariz</label>
+                                                                        <select class="custom-select form-control" id="TempPersonaDenunciadaNariz" name="TempPersonaDenunciadaNariz">
+                                                                            <option value="Desconoce" selected>Desconoce</option>
+                                                                            <option value="Convexa">Convexa</option>
+                                                                            <option value="Rectilinea">Rectilinea</option>
+                                                                            <option value="Cóncava">Cóncava</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-md-3">
+                                                                    <div class="form-group">
+                                                                        <label for="TempPersonaDenunciadaColorCabello">Color de Cabello</label>
+                                                                        <select class="custom-select form-control" id="TempPersonaDenunciadaColorCabello" name="TempPersonaDenunciadaColorCabello">
+                                                                            <option value="Desconoce" selected>Desconoce</option>
+                                                                            <option value="Negro">Negro</option>
+                                                                            <option value="Rojo">Rojo</option>
+                                                                            <option value="Rubio">Rubio</option>
+                                                                            <option value="Castaño">Castaño</option>
+                                                                            <option value="Cano">Cano</option>
+                                                                            <option value="Café">Café</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-md-3">
+                                                                    <div class="form-group">
+                                                                        <label for="TempPersonaDenunciadaCantidadCabello">Cantidad de Cabello</label>
+                                                                        <select class="custom-select form-control" id="TempPersonaDenunciadaCantidadCabello" name="TempPersonaDenunciadaCantidadCabello">
+                                                                            <option value="Desconoce" selected>Desconoce</option>
+                                                                            <option value="Escaso">Escaso</option>
+                                                                            <option value="Abundante">Abundante</option>
+                                                                            <option value="Normal">Normal</option>
+                                                                            <option value="Calvo">Calvo</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-md-3">
+                                                                    <div class="form-group">
+                                                                        <label for="TempPersonaDenunciadaBoca">Boca</label>
+                                                                        <select class="custom-select form-control" id="TempPersonaDenunciadaBoca" name="TempPersonaDenunciadaBoca">
+                                                                            <option value="Desconoce" selected>Desconoce</option>
+                                                                            <option value="Chica">Chica</option>
+                                                                            <option value="Mediana">Mediana</option>
+                                                                            <option value="Grande">Grande</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-md-3">
+                                                                    <div class="form-group">
+                                                                        <label for="TempPersonaDenunciadaComplexion">Complexión</label>
+                                                                        <select class="custom-select form-control" id="TempPersonaDenunciadaComplexion" name="TempPersonaDenunciadaComplexion">
+                                                                            <option value="Desconoce" selected>Desconoce</option>
+                                                                            <option value="Regular">Regular</option>
+                                                                            <option value="Delgada">Delgada</option>
+                                                                            <option value="Obesa">Obesa</option>
+                                                                            <option value="Fornido">Fornido</option>
+                                                                            <option value="Robusta">Robusta</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-md-3">
+                                                                    <div class="form-group">
+                                                                        <label for="TempPersonaDenunciadaColorPiel">Color de piel</label>
+                                                                        <select class="custom-select form-control" id="TempPersonaDenunciadaColorPiel" name="TempPersonaDenunciadaColorPiel">
+                                                                            <option value="Desconoce" selected>Desconoce</option>
+                                                                            <option value="Negro">Negro</option>
+                                                                            <option value="Moreno">Moreno</option>
+                                                                            <option value="Albino">Albino</option>
+                                                                            <option value="Blanco">Blanco</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-md-3">
+                                                                    <div class="form-group">
+                                                                        <label for="TempPersonaDenunciadaCejas">Cejas</label>
+                                                                        <select class="custom-select form-control" id="TempPersonaDenunciadaCejas" name="TempPersonaDenunciadaCejas">
+                                                                            <option value="Desconoce" selected>Desconoce</option>
+                                                                            <option value="Regulares">Regulares</option>
+                                                                            <option value="Escasas">Escasas</option>
+                                                                            <option value="Pobladas">Pobladas</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                                
+                                                            </div>
+
                                                         </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="wfirstName2">Alias : <span class="danger">*</span> </label>
-                                                            <input type="text" class="form-control" id="wfirstName2" name="firstName">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="wfirstName2">Ocupaciòn : <span class="danger">*</span> </label>
-                                                            <input type="text" class="form-control" id="wfirstName2" name="firstName">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="wfirstName2">Edad : <span class="danger">*</span> </label>
-                                                            <input type="text" class="form-control" id="wfirstName2" name="firstName">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="wfirstName2">Domicilio : <span class="danger">*</span> </label>
-                                                            <input type="text" class="form-control" id="wfirstName2" name="firstName">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <label for="wfirstName2">Señas particulares : <span class="danger">*</span> </label>
-                                                            <input type="text" class="form-control" id="wfirstName2" name="firstName">
+                                                        <div class="modal-footer">
+                                                            <button type="button" id="EmptyReportanPersonaTemp" class="btn btn-default" data-dismiss="modal" style="font-family:'Roboto';" onclick="EmptyPersonaTemp();">Cancelar</button>
+                                                            <button id="TempPersonaAdd" type="button" class="btn btn-info" data-dismiss="modal" style="font-family:'Roboto';" onclick="addPersonaToTable();">Añadir</button>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <h3>Filiaciòn de los presuntos</h3>
-                                                <div class="row">
-                                                    <div class="col-md-3">
-                                                        <div class="form-group">
-                                                            <label>Color de ojos :</label>
-                                                                <label class="custom-control custom-radio">
-                                                                    <input id="Desconoce" name="ColorOjos" type="radio" class="custom-control-input">
-                                                                    <span class="custom-control-label">Desconoce</span>
-                                                                </label>
-                                                                <label class="custom-control custom-radio">
-                                                                    <input id="OjosVerdes" name="ColorOjos" type="radio" class="custom-control-input">
-                                                                    <span class="custom-control-label">Verdes</span>
-                                                                </label>
-                                                                <label class="custom-control custom-radio">
-                                                                    <input id="OjosCafe" name="ColorOjos" type="radio" class="custom-control-input">
-                                                                    <span class="custom-control-label">Cafès</span>
-                                                                </label>     
-                                                                <label class="custom-control custom-radio">
-                                                                    <input id="OjosNegro" name="ColorOjos" type="radio" class="custom-control-input">
-                                                                    <span class="custom-control-label">Negros</span>
-                                                                </label>
-                                                                <label class="custom-control custom-radio">
-                                                                    <input id="OjosAzul" name="ColorOjos" type="radio" class="custom-control-input">
-                                                                    <span class="custom-control-label">Azules</span>
-                                                                </label>
-                                                        
-                                                        </div>
+                                            </div>
+
+                                            <div class="row PersonasTablaContainer" style="display:none;">
+
+                                                <div class="col-md-12 PersonasTabla">
+                                                    <h4 class="card-title">Personas reportadas</h4>
+                                                    <div class="table-responsive">
+                                                        <table class="table color-table muted-table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th class='align-middle'>Nombre</th>
+                                                                    <th class='align-middle'>Alias</th>
+                                                                    <th class='align-middle'>Ocupación</th>
+                                                                    <th class='align-middle'>Edad</th>
+                                                                    <th class='align-middle'>Domicilio</th>
+                                                                    <th class='align-middle'>Señas particulares</th>
+                                                                    <th class='align-middle'>Color de ojos</th>
+                                                                    <th class='align-middle'>Tipo de nariz</th>
+                                                                    <th class='align-middle'>Color de cabello</th>
+                                                                    <th class='align-middle'>Cantidad de cabello</th>
+                                                                    <th class='align-middle'>Boca</th>
+                                                                    <th class='align-middle'>Complexión</th>
+                                                                    <th class='align-middle'>Color de piel</th>
+                                                                    <th class='align-middle'>Cejas</th>
+                                                                    <th></th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody class='PersonasRows'>
+                                                            </tbody>
+                                                        </table>
                                                     </div>
-                                                    <div class="col-md-3">
-                                                        <div class="form-group">
-                                                            <label>Nariz :</label>
-                                                                <label class="custom-control custom-radio">
-                                                                    <input id="Desc" name="Nariz" type="radio" class="custom-control-input">
-                                                                    <span class="custom-control-label">Desconoce</span>
-                                                                </label>
-                                                                <label class="custom-control custom-radio">
-                                                                    <input id="Conve" name="Nariz" type="radio" class="custom-control-input">
-                                                                    <span class="custom-control-label">Convexa</span>
-                                                                </label>
-                                                                <label class="custom-control custom-radio">
-                                                                    <input id="Rec" name="Nariz" type="radio" class="custom-control-input">
-                                                                    <span class="custom-control-label">Rectilinea</span>
-                                                                </label>     
-                                                                <label class="custom-control custom-radio">
-                                                                    <input id="Con" name="Nariz" type="radio" class="custom-control-input">
-                                                                    <span class="custom-control-label">Concava</span>
-                                                                </label>
-                                                                
-                                                        
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <div class="form-group">
-                                                            <label>Color de Cabello :</label>
-                                                                <label class="custom-control custom-radio">
-                                                                    <input id="DescCa" name="ColorCabello" type="radio" class="custom-control-input">
-                                                                    <span class="custom-control-label">Desconoce</span>
-                                                                </label>
-                                                                <label class="custom-control custom-radio">
-                                                                    <input id="CaNegro" name="ColorCabello" type="radio" class="custom-control-input">
-                                                                    <span class="custom-control-label">Negro</span>
-                                                                </label>
-                                                                <label class="custom-control custom-radio">
-                                                                    <input id="CaRojo" name="ColorCabello" type="radio" class="custom-control-input">
-                                                                    <span class="custom-control-label">Rojo</span>
-                                                                </label>     
-                                                                <label class="custom-control custom-radio">
-                                                                    <input id="CaRu" name="ColorCabello" type="radio" class="custom-control-input">
-                                                                    <span class="custom-control-label">Rubio</span>
-                                                                </label>
-                                                                <label class="custom-control custom-radio">
-                                                                    <input id="CaCast" name="ColorCabello" type="radio" class="custom-control-input">
-                                                                    <span class="custom-control-label">Castaño</span>
-                                                                </label>
-                                                                <label class="custom-control custom-radio">
-                                                                    <input id="CaCano" name="ColorCabello" type="radio" class="custom-control-input">
-                                                                    <span class="custom-control-label">Cano</span>
-                                                                </label>
-                                                                <label class="custom-control custom-radio">
-                                                                    <input id="CaCafe" name="ColorCabello" type="radio" class="custom-control-input">
-                                                                    <span class="custom-control-label">Cafe</span>
-                                                                </label>
-                                                        
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <div class="form-group">
-                                                            <label>Cantidad de cabello :</label>
-                                                                <label class="custom-control custom-radio">
-                                                                    <input id="DescCabello" name="CantCabello" type="radio" class="custom-control-input">
-                                                                    <span class="custom-control-label">Desconoce</span>
-                                                                </label>
-                                                                <label class="custom-control custom-radio">
-                                                                    <input id="EscCa" name="CantCabello" type="radio" class="custom-control-input">
-                                                                    <span class="custom-control-label">Escaso</span>
-                                                                </label>
-                                                                <label class="custom-control custom-radio">
-                                                                    <input id="AbuCa" name="CantCabello" type="radio" class="custom-control-input">
-                                                                    <span class="custom-control-label">Abundante</span>
-                                                                </label>     
-                                                                <label class="custom-control custom-radio">
-                                                                    <input id="NorCa" name="CantCabello" type="radio" class="custom-control-input">
-                                                                    <span class="custom-control-label">Normal</span>
-                                                                </label>
-                                                                <label class="custom-control custom-radio">
-                                                                    <input id="CalCa" name="CantCabello" type="radio" class="custom-control-input">
-                                                                    <span class="custom-control-label">Calvo</span>
-                                                                </label>
-                                                                
-                                                        
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <div class="form-group">
-                                                            <label>Boca :</label>
-                                                                <label class="custom-control custom-radio">
-                                                                    <input id="DescBo" name="Boca" type="radio" class="custom-control-input">
-                                                                    <span class="custom-control-label">Desconoce</span>
-                                                                </label>
-                                                                <label class="custom-control custom-radio">
-                                                                    <input id="MedBo" name="Boca" type="radio" class="custom-control-input">
-                                                                    <span class="custom-control-label">Mediana</span>
-                                                                </label>
-                                                                <label class="custom-control custom-radio">
-                                                                    <input id="GranBo" name="Boca" type="radio" class="custom-control-input">
-                                                                    <span class="custom-control-label">Grande</span>
-                                                                </label>     
-                                                                <label class="custom-control custom-radio">
-                                                                    <input id="ChiBo" name="Boca" type="radio" class="custom-control-input">
-                                                                    <span class="custom-control-label">Chico</span>
-                                                                </label>
-                                                                
-                                                        
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <div class="form-group">
-                                                            <label>Complexion :</label>
-                                                                <label class="custom-control custom-radio">
-                                                                    <input id="DescCom" name="Complexion" type="radio" class="custom-control-input">
-                                                                    <span class="custom-control-label">Desconoce</span>
-                                                                </label>
-                                                                <label class="custom-control custom-radio">
-                                                                    <input id="RegCom" name="Complexion" type="radio" class="custom-control-input">
-                                                                    <span class="custom-control-label">Regular</span>
-                                                                </label>
-                                                                <label class="custom-control custom-radio">
-                                                                    <input id="DelCom" name="Complexion" type="radio" class="custom-control-input">
-                                                                    <span class="custom-control-label">Delgada</span>
-                                                                </label>     
-                                                                <label class="custom-control custom-radio">
-                                                                    <input id="ObeCom" name="Complexion" type="radio" class="custom-control-input">
-                                                                    <span class="custom-control-label">Obesa</span>
-                                                                </label>
-                                                                <label class="custom-control custom-radio">
-                                                                    <input id="ForCom" name="Complexion" type="radio" class="custom-control-input">
-                                                                    <span class="custom-control-label">Fornido</span>
-                                                                </label>
-                                                                <label class="custom-control custom-radio">
-                                                                    <input id="RobCom" name="Complexion" type="radio" class="custom-control-input">
-                                                                    <span class="custom-control-label">Robusta</span>
-                                                                </label>
-                                                                
-                                                        
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <div class="form-group">
-                                                            <label>Color de Piel :</label>
-                                                                <label class="custom-control custom-radio">
-                                                                    <input id="DescPi" name="ColorPiel" type="radio" class="custom-control-input">
-                                                                    <span class="custom-control-label">Desconoce</span>
-                                                                </label>
-                                                                <label class="custom-control custom-radio">
-                                                                    <input id="NegPi" name="ColorPiel" type="radio" class="custom-control-input">
-                                                                    <span class="custom-control-label">Negro</span>
-                                                                </label>
-                                                                <label class="custom-control custom-radio">
-                                                                    <input id="MorPi" name="ColorPiel" type="radio" class="custom-control-input">
-                                                                    <span class="custom-control-label">Moreno</span>
-                                                                </label>     
-                                                                <label class="custom-control custom-radio">
-                                                                    <input id="AlbPi" name="ColorPiel" type="radio" class="custom-control-input">
-                                                                    <span class="custom-control-label">Albino</span>
-                                                                </label>
-                                                                <label class="custom-control custom-radio">
-                                                                    <input id="BlaPi" name="ColorPiel" type="radio" class="custom-control-input">
-                                                                    <span class="custom-control-label">Blanco</span>
-                                                                </label>
-                                                                
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-3">
-                                                        <div class="form-group">
-                                                            <label>Cejas :</label>
-                                                                <label class="custom-control custom-radio">
-                                                                    <input id="DescCe" name="Cejas" type="radio" class="custom-control-input">
-                                                                    <span class="custom-control-label">Desconoce</span>
-                                                                </label>
-                                                                <label class="custom-control custom-radio">
-                                                                    <input id="RegCe" name="Cejas" type="radio" class="custom-control-input">
-                                                                    <span class="custom-control-label">Regulares</span>
-                                                                </label>
-                                                                <label class="custom-control custom-radio">
-                                                                    <input id="EscCe" name="Cejas" type="radio" class="custom-control-input">
-                                                                    <span class="custom-control-label">Escasas</span>
-                                                                </label>     
-                                                                <label class="custom-control custom-radio">
-                                                                    <input id="PobCe" name="Cejas" type="radio" class="custom-control-input">
-                                                                    <span class="custom-control-label">Pobladas</span>
-                                                                </label>
-                                                                
-                                                        
-                                                        </div>
-                                                    </div>
-                                                            
-                                                    
-                                                </div>    
+                                                </div>
+
                                             </div>
                                                 
                                         </section>

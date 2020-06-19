@@ -49,7 +49,7 @@ class ModeloCaptura{
 
 	static public function mdlMostrarCatalogo($tabla, $id_necesidad){
 
-		$stmt = Conexion::conectar() -> prepare("SELECT CON_ID, CON_DESCRIPCION FROM $tabla WHERE CAT_ID = $id_necesidad ORDER BY CON_ID ASC;");
+		$stmt = Conexion::conectar() -> prepare("SELECT CON_ID, CON_DESCRIPCION, CON_VALOR FROM $tabla WHERE CAT_ID = $id_necesidad ORDER BY CON_ID ASC;");
 
 		$stmt -> execute();
 

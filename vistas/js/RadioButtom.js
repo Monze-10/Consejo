@@ -83,6 +83,23 @@
 
 // --------------------------------------------------------------------------------------------------------------------------- //
 
+// Función para ocultar y/o desocultar Personas.
+
+$('#ReportanPersonaSwitch').on('switchChange.bootstrapSwitch', function (event, state) {
+    
+    if(state){
+        $(".ReportanPersonaOpciones").fadeIn('fast');
+    }else{
+        $(".ReportanPersonaOpciones").fadeOut('fast');
+        $(".PersonasTablaContainer").fadeOut('fast');
+        $(".Personas").remove();
+    }
+
+});
+
+// --------------------------------------------------------------------------------------------------------------------------- //
+
+
 // Función para ocultar y/o desocultar lugar de los hechos.
 
 $('#LugarHechosSwitch').on('switchChange.bootstrapSwitch', function (event, state) {
@@ -170,6 +187,28 @@ function initMarcas(){
         }
     });
 
+}
+
+function EmptyPersonaTemp(){
+    $("#TempPersonaDenunciadaNombre").val('');
+    $("#TempPersonaDenunciadaAlias").val('');
+    $("#TempPersonaDenunciadaOcupacion").val('');
+    $("#TempPersonaDenunciadaEdad").val('');
+    $("#TempPersonaDenunciadaDomicilio").val('');
+    $("#TempPersonaDenunciadaSeñas").val('');
+    $("#TempPersonaDenunciadaColorOjos").val('Desconoce');
+    $("#TempPersonaDenunciadaNariz").val('Desconoce');
+    $("#TempPersonaDenunciadaColorCabello").val('Desconoce');
+    $("#TempPersonaDenunciadaCantidadCabello").val('Desconoce');
+    $("#TempPersonaDenunciadaBoca").val('Desconoce');
+    $("#TempPersonaDenunciadaComplexion").val('Desconoce');
+    $("#TempPersonaDenunciadaColorPiel").val('Desconoce');
+    $("#TempPersonaDenunciadaCejas").val('Desconoce');
+
+    $("#TempPersonaDenunciadaApellidoPaterno").val('');
+    $("#TempPersonaDenunciadaApellidoMaterno").val('');
+    
+    
 }
 
 function getModelo(){
@@ -323,7 +362,9 @@ function getModelo(){
                     url: 'vistas/ViewComponentes.php?catalogo=get&id_catalogo=' + document.getElementById("DescripcionNecesidad").value,
                     success: function (data) {
                       for (var key in data) {
-                        $('#DescripcionCatalogo').append("<option value='" + data[key].CON_ID + "'>" + data[key].CON_DESCRIPCION + "</option>");
+                        var valor = data[key].CON_VALOR;
+                        console.log("valor", valor);
+                        $('#DescripcionCatalogo').append("<option value='" + (valor ? data[key].CON_VALOR : data[key].CON_ID) + "'>" + data[key].CON_DESCRIPCION + "</option>");
                       }
                     }
                   });
