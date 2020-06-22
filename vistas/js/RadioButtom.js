@@ -379,9 +379,6 @@ var delitos = [];
 
             case '1': case '4': case '13': case '35': case '40':
 
-                $(".Necesidad").fadeOut(); // <- Ocultar cada div de cada necesidad 
-                $(".Necesidades").fadeOut(); // <- Ocultar div que contiene todos los div de necesidades
-
                 $("#NecesidadCatalogo").fadeOut(); // <- Ocultar el select de catálogo
                 $("#NecesidadDelitoInfraccion").fadeOut(); // <- Ocultar el select de delito/infracción
 
@@ -409,9 +406,8 @@ var delitos = [];
 
     function seleccionarDelitos(){
 
-
-        $(".Necesidad").fadeOut(); // <- Ocultar cada div de cada necesidad 
-        $(".Necesidades").fadeOut(); // <- Ocultar div que contiene todos los div de necesidades
+       // $(".Necesidad").fadeOut(); // <- Ocultar cada div de cada necesidad 
+        //$(".Necesidades").fadeOut(); // <- Ocultar div que contiene todos los div de necesidades
 
         $("#NecesidadCatalogo").fadeIn(); // <- Mostrar el select de catálogo
 
@@ -439,23 +435,32 @@ var delitos = [];
             $('#DescripcionDelitoInfraccion').html("<option disabled selected value=''>Selecciona una opción</option>"); // <- Darles por defecto el valor vacio
             $("#NecesidadDelitoInfraccion").fadeOut(); // <- Ocultar el select de delito/infracción
         }
-        
-        if(document.getElementById("DescripcionCatalogo").value == "Otro" || document.getElementById("DescripcionCatalogo").value == "Otros"){
-            $('#DescripcionDelitoInfraccion').html("<option disabled selected value=''>Selecciona una opción</option>"); // <- Darles por defecto el valor vacio
-            $("#NecesidadDelitoInfraccion").fadeOut(); // <- Ocultar el select de delito/infracción
-            mostrarDivNecesidad(document.getElementById("DescripcionNecesidad").value);
+
+        console.log($("#DescripcionNecesidad").val());
+
+        if(document.getElementById("DescripcionNecesidad").value == 43){
+            $(".Necesidad").fadeOut('fast'); // <- Ocultar cada div de cada necesidad 
+            $(".Necesidades").fadeIn('fast'); // <- Ocultar div que contiene todos los div de necesidades
+            $("#43").fadeIn('fast'); // <-Mostrar el div con el id de necesidad
         }
 
+        if(document.getElementById("DescripcionNecesidad").value == 42){
 
+            if(document.getElementById("DescripcionCatalogo").value == "Otro"){
+                $('#DescripcionDelitoInfraccion').html("<option disabled selected value=''>Selecciona una opción</option>"); // <- Darles por defecto el valor vacio
+                $("#NecesidadDelitoInfraccion").fadeOut(); // <- Ocultar el select de delito/infracción
+                mostrarDivNecesidad(document.getElementById("DescripcionNecesidad").value);
+            }
+
+        }
 
     }
 
     function mostrarDivNecesidad(id_necesidad){
 
-        console.log(id_necesidad);
-
-        $(".Necesidades").fadeOut(); // <- Ocultar div que contiene todos los div de necesidades
-        $(".Necesidad").fadeOut(); // <- Ocultar cada div de cada necesidad 
+        $(".Necesidad").fadeOut('fast'); // <- Ocultar cada div de cada necesidad 
+        $(".Necesidades").fadeIn('fast'); // <- Ocultar div que contiene todos los div de necesidades
+        $("#" + id_necesidad + "").fadeIn('fast'); // <-Mostrar el div con el id de necesidad
         
     }
 
