@@ -375,9 +375,15 @@
 
 			return $respuesta;
 
+		}		
+
+		public static function mdlReporteCiudadanoValidadorReporte($query){
+
+			$respuesta = ModeloCaptura::mdlReporteCiudadanoValidadorReporte($query);
+
+			return $respuesta;
+
 		}
-
-
 	}
 
 ?>

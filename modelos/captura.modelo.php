@@ -478,6 +478,19 @@ class ModeloCaptura{
 
 	}
 	
+	public static function mdlReporteCiudadanoValidadorReporte($query){
+
+		$stmt = Conexion::conectar() -> prepare($query);
+
+		$stmt -> execute();
+
+		return $stmt -> fetchall();
+
+		$stmt -> close();
+
+		$stmt = null;
+
+	}
 
 }
 
