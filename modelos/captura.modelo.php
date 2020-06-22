@@ -1,4 +1,3 @@
-
 <?php
 
 // require "conexion.php";
@@ -50,7 +49,20 @@ class ModeloCaptura{
 
 	static public function mdlMostrarCatalogo($tabla, $id_necesidad){
 
-		$stmt = Conexion::conectar() -> prepare("SELECT CON_ID, CON_DESCRIPCION, CON_VALOR FROM $tabla WHERE CAT_ID = $id_necesidad ORDER BY CON_ID ASC;");
+		$stmt = Conexion::conectar() -> prepare("SELECT IF(CON_VALOR = '', CON_DESCRIPCION, CON_VALOR) AS CON_ID, CON_DESCRIPCION FROM detalle_catalogos WHERE CAT_ID = $id_necesidad ORDER BY CON_ID ASC;");
+
+		$stmt -> execute();
+
+		return $stmt -> fetchall();
+
+		$stmt -> close();
+
+		$stmt = null;
+	}
+
+	static public function mdlMostrarCatalogoDelitos($tabla, $catalogo_delitos){
+
+		$stmt = Conexion::conectar() -> prepare("SELECT CON_ID, CON_DESCRIPCION FROM $tabla WHERE CAT_ID = $catalogo_delitos;ORDER BY CON_ID ASC;");
 
 		$stmt -> execute();
 
@@ -87,7 +99,7 @@ class ModeloCaptura{
 		$stmt = null;
 	}
 
-	static public function mdlMostrarDetalle($tabla){
+		static public function mdlMostrarDetalle($tabla){
 
 		$stmt = Conexion::conectar() -> prepare("SELECT CAT_ID, CON_ID, CON_DESCRIPCION FROM $tabla WHERE CAT_ID= 3 OR CAT_ID=2 OR CAT_ID=6 OR CAT_ID=7 OR CAT_ID=12 ORDER BY CAT_ID ASC ");
 
@@ -466,19 +478,8 @@ class ModeloCaptura{
 
 	}
 	
-	public static function mdlContarTelefonos($telefono){
-		$stmt = Conexion::conectar() -> prepare("SELECT Count(R_IdReg) TOTAL FROM reporteciudadano WHERE R_IdenLlamadas = $telefono;");
 
-		$stmt -> execute();
-
-		return $stmt -> fetchall();
-
-		$stmt -> close();
-
-		$stmt = null;
-	}
 }
-
 
 
 ?>

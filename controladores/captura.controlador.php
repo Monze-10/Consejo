@@ -48,6 +48,16 @@
 
 		}
 
+		static public function crtMostrarCatalogoDelito($catalogo_delito){
+
+			$tabla = "detalle_catalogos";
+
+			$respuesta = ModeloCaptura::mdlMostrarCatalogoDelitos($tabla, $catalogo_delito);
+
+			return $respuesta;
+
+		}
+
 		static public function crtMostrarProgramaEspecial(){
 
 			$tabla = "contenido_catalogos";
@@ -367,11 +377,7 @@
 
 		}
 
-		public static function ctrContarTelefonos($telefono){
-			
-			$respuesta = ModeloCaptura::mdlContarTelefonos($telefono);
 
-			return $respuesta;
-		}
 	}
+
 ?>

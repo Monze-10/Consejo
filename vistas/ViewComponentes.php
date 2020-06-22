@@ -38,6 +38,17 @@
 
         echo json_encode($catalogo);
          
+    }else if (isset($_GET["catalogo_delito"])){
+
+        include "../modelos/conexion.php";
+        include "../controladores/captura.controlador.php";
+        include "../modelos/captura.modelo.php";
+
+        $captura = new ControladorCaptura();
+        $catalogo_delito = $captura -> crtMostrarCatalogoDelito($_GET["catalogo_delito"]);
+
+        echo json_encode($catalogo_delito);
+         
     }else if (isset($_GET["terminacion_llamada"]) && $_GET["terminacion_llamada"] == "get"){
 
         include "../modelos/conexion.php";

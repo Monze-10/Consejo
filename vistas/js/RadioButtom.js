@@ -321,9 +321,11 @@ function getModelo(){
 
 // --------------------------------------------------------------------------------------------------------------------------- //
 
+var delitos = [];
+
 // Función para elegir la necesidad del denunciante.
 
-    function seleccionarNecesidad(){
+    function seleccionarCatalogo(){
 
         switch (document.getElementById("DescripcionNecesidad").value) {
 
@@ -353,6 +355,8 @@ function getModelo(){
                 $("#NecesidadCatalogo").fadeIn(); // <- Mostrar el select de catálogo
                 $("#NecesidadDelitoInfraccion").fadeOut(); // <- Ocultar el select de delito/infracción
 
+                delitos = ['2', '7', '23', '42', '43'];
+
                 $("#DescripcionDelitoInfraccion").html('<option value="" disabled selected>Selecciona una opción</option>'); // <- Darles por defecto el valor vacio
                 $('#DescripcionCatalogo').html("<option disabled selected value=''>Selecciona una opción</option>"); // <- Darles por defecto el valor vacio
 
@@ -362,9 +366,7 @@ function getModelo(){
                     url: 'vistas/ViewComponentes.php?catalogo=get&id_catalogo=' + document.getElementById("DescripcionNecesidad").value,
                     success: function (data) {
                       for (var key in data) {
-                        var valor = data[key].CON_VALOR;
-                        console.log("valor", valor);
-                        $('#DescripcionCatalogo').append("<option value='" + (valor ? data[key].CON_VALOR : data[key].CON_ID) + "'>" + data[key].CON_DESCRIPCION + "</option>");
+                        $('#DescripcionCatalogo').append("<option value='" + data[key].CON_ID + "'>" + data[key].CON_DESCRIPCION + "</option>");
                       }
                     }
                   });
@@ -405,28 +407,46 @@ function getModelo(){
 
     }
 
-    function seleccionarCatalogo(){
+    function seleccionarDelitos(){
 
-        document.getElementById("DescripcionCatalogo").value;
 
         $(".Necesidad").fadeOut(); // <- Ocultar cada div de cada necesidad 
         $(".Necesidades").fadeOut(); // <- Ocultar div que contiene todos los div de necesidades
 
         $("#NecesidadCatalogo").fadeIn(); // <- Mostrar el select de catálogo
-        $("#NecesidadDelitoInfraccion").fadeIn(); // <- Ocultar el select de delito/infracción
 
-        $('#DescripcionCatalogo').html("<option disabled selected value=''>Selecciona una opción</option>"); // <- Darles por defecto el valor vacio
+        if(delitos.includes(document.getElementById("DescripcionNecesidad").value)){
+            $("#NecesidadDelitoInfraccion").fadeIn(); // <- Mostrar el select de delito/infracción
 
-        $.ajax({
-            type: 'GET',
-            dataType: "json",
-            url: 'vistas/ViewComponentes.php?catalogo=get&id_catalogo=' + document.getElementById("DescripcionNecesidad").value,
-            success: function (data) {
-              for (var key in data) {
-                $('#DescripcionCatalogo').append("<option value='" + data[key].CON_ID + "'>" + data[key].CON_DESCRIPCION + "</option>");
-              }
+            if(!isNaN(document.getElementById("DescripcionCatalogo").value)){
+
+                $('#DescripcionDelitoInfraccion').html("<option disabled selected value=''>Selecciona una opción</option>"); // <- Darles por defecto el valor vacio
+
+                $.ajax({
+                    type: 'GET',
+                    dataType: "json",
+                    url: 'vistas/ViewComponentes.php?catalogo_delito=' + document.getElementById("DescripcionCatalogo").value,
+                    success: function (data) {
+                      for (var key in data) {
+                        $('#DescripcionDelitoInfraccion').append("<option value='" + data[key].CON_ID + "'>" + data[key].CON_DESCRIPCION + "</option>");
+                      }
+                    }
+                  });
+
             }
-          });
+
+        }else{
+            $('#DescripcionDelitoInfraccion').html("<option disabled selected value=''>Selecciona una opción</option>"); // <- Darles por defecto el valor vacio
+            $("#NecesidadDelitoInfraccion").fadeOut(); // <- Ocultar el select de delito/infracción
+        }
+        
+        if(document.getElementById("DescripcionCatalogo").value == "Otro" || document.getElementById("DescripcionCatalogo").value == "Otros"){
+            $('#DescripcionDelitoInfraccion').html("<option disabled selected value=''>Selecciona una opción</option>"); // <- Darles por defecto el valor vacio
+            $("#NecesidadDelitoInfraccion").fadeOut(); // <- Ocultar el select de delito/infracción
+            mostrarDivNecesidad(document.getElementById("DescripcionNecesidad").value);
+        }
+
+
 
     }
 
@@ -434,9 +454,9 @@ function getModelo(){
 
         console.log(id_necesidad);
 
-        $(".Necesidad").fadeOut(); // <- Ocultar cada div de cada necesidad 
         $(".Necesidades").fadeOut(); // <- Ocultar div que contiene todos los div de necesidades
-
+        $(".Necesidad").fadeOut(); // <- Ocultar cada div de cada necesidad 
+        
     }
 
     function selectNecesidad(){
